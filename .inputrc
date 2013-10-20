@@ -1,0 +1,20 @@
+$if Bash
+    # M-h delete word
+    "\eh": unix-word-rubout
+    # ignore case
+    set completion-ignore-case on
+    # M-k delete to beginning of the line from the cursor position
+    "\ek": unix-line-discard
+    "\ey":paste-from-clipboard
+    set output-meta on
+    set convert-meta off
+    set meta-flag on
+$endif
+
+$if mysql
+ "\C-xd": "show databases;"
+  "\C-xt": "show tables;"
+  "\C-xu": "select user,host,password from mysql.user order by user,host;"
+  "\C-xb": "select user,host,db       from mysql.db   order by user,host;"
+  "\C-xc": "show create table TN\\G"
+$endif

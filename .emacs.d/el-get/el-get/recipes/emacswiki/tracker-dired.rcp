@@ -1,0 +1,5 @@
+(:name tracker-dired
+:auto-generated t
+:type emacswiki
+:description "run a tracker-search query and dired the output"
+:website "https://raw.github.com/emacsmirror/emacswiki.org/master/tracker-dired.el")
