@@ -1,6 +1,7 @@
 .DS_Store
 .ssh-agent
 .gitconfig.user.home
+.gitconfig.user.work
 .emacs.d/ac-comphist.dat
 .emacs.d/auto-save-list
 .emacs.d/history
