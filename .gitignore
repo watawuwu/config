@@ -1,0 +1,14 @@
+.DS_Store
+.ssh-agent
+.gitconfig.user.home
+.emacs.d/ac-comphist.dat
+.emacs.d/auto-save-list
+.emacs.d/history
+.emacs.d/private
+.emacs.d/tramp
+.emacs.d/undohist
+.emacs.d/url
+.emacs.d/el-get/emacs-w3m/config.status
+*.elc
+.svn/
+.git/

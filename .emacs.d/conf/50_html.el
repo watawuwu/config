@@ -1,0 +1,33 @@
+;;;; ==========================================================================================================
+;;;; html-helper-mode
+;;;; ==========================================================================================================
+
+
+(autoload 'html-helper-mode "html-helper-mode" "Yay HTML" t)
+(setq auto-mode-alist (cons '("\\.html$" . html-helper-mode) auto-mode-alist))
+(add-hook 'html-mode-hook '(lambda ()
+                             (setq c-basic-offset 4)
+                             (setq c-tab-width 4)
+                             (setq c-argdecl-indent 0)
+                             (setq c-auto-newline nil)
+                             (setq c-continued-statement-offset 0)
+                             (setq c-indent-level 4)
+                             (setq c-label-offset -4)
+                             (setq c-tab-always-indent nil)
+                             (setq indent-tabs-mode nil)
+                             (setq tab-width 4)
+                             (setq-default tab-width 4)
+                             ) t)
+(add-hook 'html-helper-mode-hook '(lambda ()
+                                    (setq c-basic-offset 4)
+                                    (setq c-tab-width 4)
+                                    (setq c-argdecl-indent 0)
+                                    (setq c-auto-newline nil)
+                                    (setq c-continued-statement-offset 0)
+                                    (setq c-indent-level 4)
+                                    (setq c-label-offset -4)
+                                    (setq c-tab-always-indent nil)
+                                    (setq indent-tabs-mode nil)
+                                    (setq tab-width 4)
+                                    (setq-default tab-width 4)
+                                    ) t)

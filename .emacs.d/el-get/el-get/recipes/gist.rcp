@@ -1,0 +1,5 @@
+(:name gist
+       :description "Emacs integration for gist.github.com"
+       :type github
+       :pkgname "defunkt/gist.el"
+       :depends gh)

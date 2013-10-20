@@ -1,0 +1,98 @@
+[include]
+    path = .gitconfig.user
+
+[core]
+    excludesfile = $HOME/.gitignore
+    autocrlf = input
+    pager = lv -c
+    whitespace = trailing-space,space-before-tab,-indent-with-non-tab,-cr-at-eol
+
+[color]
+    ui = auto
+
+[merge]
+    keepBackup = false
+    tool = p4merge
+
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+
+[diff]
+    external = p4diff
+    tool = p4merge
+
+[difftool "p4merge"]
+    cmd = p4merge "$LOCAL" "$REMOTE"
+    prompt = false
+
+[push]
+    default = tracking
+
+[alias]
+    # common
+    st = status
+    sts = status --short --branch
+    sh = show
+    so = remote show origin
+    ft = fetch
+    up = pull --rebase
+    rbm = rebase master
+    ad = add
+    ci = commit
+    cal = commit -a
+    cam = commit -a --amend
+    co = checkout
+
+    # branch
+    br = branch
+    ba = branch -a
+    bm = branch --merged
+    bn = branch --no-merged
+
+    # log
+    wc = whatchanged
+    ls = log --stat
+    lp = log -p
+    la = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+    lr = log origin
+    oneline = log --pretty=oneline
+    ranking = shortlog -s -n --no-merges
+
+    # log tree
+    log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+    log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+    log-deco = log --oneline --decorate --graph
+
+    # diff
+    dm = diff master
+    dw = diff --color-words
+    dc = diff --cached
+    ds = diff --staged
+    d1 = diff HEAD~
+    d2 = diff HEAD~~
+    d3 = diff HEAD~~~
+    d4 = diff HEAD~~~~
+    d5 = diff HEAD~~~~~
+    d10 = diff HEAD~~~~~~~~~~
+
+    # merge
+    edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; ec `f`"
+    add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+
+    # grep
+    gr = grep
+    gn = grep -n
+
+    # update-index
+    assume = update-index --assume-unchanged
+    no-assume = update-index --no-assume-unchanged
+    ls-assume = "git ls-files -v | grep '^[[:lower:]]'"
+
+# remote branch controll
+# [receive] --system
+#     fsckObjects = true #default : false
+#     denyNonFastForwards = true
+#     denyDeletes = true
