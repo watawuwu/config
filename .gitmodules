@@ -49,3 +49,6 @@
 [submodule ".emacs.d/el-get/yaml-mode"]
 	path = .emacs.d/el-get/yaml-mode
 	url = http://github.com/yoshiki/yaml-mode.git
+[submodule ".emacs.d/el-get/apache-mode"]
+	path = .emacs.d/el-get/apache-mode
+	url = http://github.com/emacsmirror/apache-mode.git
