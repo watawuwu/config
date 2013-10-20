@@ -244,7 +244,7 @@
 
 ;; el-get
 (when (require 'el-get nil t)
-  (el-get 'sync))
+ (el-get 'sync))
 
 
 ;; git
@@ -431,7 +431,7 @@
   (global-undo-tree-mode))
 
 ;; apples-mode
-(when (require 'apples-mode)
+(when (require 'apples-mode nil t)
   (add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode)))
 
 ;;;; ===================================================================================================

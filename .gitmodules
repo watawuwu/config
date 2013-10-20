@@ -1,0 +1,51 @@
+[submodule ".emacs.d/elisp/helm"]
+	path = .emacs.d/elisp/helm
+	url = https://github.com/emacs-helm/helm.git
+[submodule ".emacs.d/elisp/helm-ag"]
+	path = .emacs.d/elisp/helm-ag
+	url = https://github.com/syohex/emacs-helm-ag.git
+[submodule ".emacs.d/elisp/helm-descbinds"]
+	path = .emacs.d/elisp/helm-descbinds
+	url = https://github.com/emacs-helm/helm-descbinds.git
+[submodule ".emacs.d/elisp/helm-etags-plus"]
+	path = .emacs.d/elisp/helm-etags-plus
+	url = https://github.com/jixiuf/helm-etags-plus.git
+[submodule ".emacs.d/elisp/helm-git"]
+	path = .emacs.d/elisp/helm-git
+	url = https://github.com/emacs-helm/helm-ls-git.git
+[submodule ".emacs.d/elisp/helm-migemo"]
+	path = .emacs.d/elisp/helm-migemo
+	url = https://github.com/emacs-helm/helm-migemo.git
+[submodule ".emacs.d/elisp/helm-orgcard"]
+	path = .emacs.d/elisp/helm-orgcard
+	url = https://github.com/emacs-helm/helm-orgcard.git
+[submodule ".emacs.d/elisp/helm-gtags"]
+	path = .emacs.d/elisp/helm-gtags
+	url = https://github.com/syohex/emacs-helm-gtags.git
+[submodule ".emacs.d/el-get/el-get"]
+	path = .emacs.d/el-get/el-get
+	url = https://github.com/dimitri/el-get.git
+[submodule ".emacs.d/elisp/apples-mode"]
+	path = .emacs.d/elisp/apples-mode
+	url = git://github.com/tequilasunset/apples-mode.git
+[submodule ".emacs.d/elisp/powerline"]
+	path = .emacs.d/elisp/powerline
+	url = git://github.com/jonathanchu/emacs-powerline.git
+[submodule ".emacs.d/elisp/shellenv"]
+	path = .emacs.d/elisp/shellenv
+	url = https://github.com/zonuexe/shellenv-el.git
+[submodule ".emacs.d/el-get/ensime"]
+	path = .emacs.d/el-get/ensime
+	url = http://github.com/aemoncannon/ensime.git
+[submodule ".emacs.d/el-get/magit"]
+	path = .emacs.d/el-get/magit
+	url = http://github.com/magit/magit.git
+[submodule ".emacs.d/el-get/undo-tree"]
+	path = .emacs.d/el-get/undo-tree
+	url = http://www.dr-qubit.org/git/undo-tree.git
+[submodule ".emacs.d/el-get/popwin"]
+	path = .emacs.d/el-get/popwin
+	url = http://github.com/m2ym/popwin-el.git
+[submodule ".emacs.d/el-get/yaml-mode"]
+	path = .emacs.d/el-get/yaml-mode
+	url = http://github.com/yoshiki/yaml-mode.git

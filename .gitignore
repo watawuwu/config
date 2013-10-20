@@ -12,4 +12,3 @@
 .emacs.d/el-get/emacs-w3m/config.status
 *.elc
 .svn/
-.git/
