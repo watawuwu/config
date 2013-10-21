@@ -10,5 +10,6 @@
 .emacs.d/undohist
 .emacs.d/url
 .emacs.d/el-get/emacs-w3m/config.status
+.status.el.old
 *.elc
 .svn/
