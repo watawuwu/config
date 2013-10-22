@@ -158,6 +158,9 @@ if [ `uname` = "Darwin" ]; then
     # tmux
     alias tm='/usr/local/bin/tmuxx'
 
+    # ssh
+    alias ssh="osascript ${UTILS_PATH}/ssh_with_profile.scpt"
+
 elif [ `uname` = "Linux" ]; then
     # for ubuntu
     #============================================================================================
