@@ -2,14 +2,5 @@
 .ssh-agent
 .gitconfig.user.home
 .gitconfig.user.work
-.emacs.d/ac-comphist.dat
-.emacs.d/auto-save-list
-.emacs.d/history
-.emacs.d/private
-.emacs.d/tramp
-.emacs.d/undohist
-.emacs.d/url
-.emacs.d/el-get/emacs-w3m/config.status
-.status.el.old
 *.elc
 .svn/
