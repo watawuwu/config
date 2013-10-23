@@ -1,0 +1,4 @@
+(:name org-html5presentation
+       :description "HTML5 Presentation export for Org-mode."
+       :type github
+       :pkgname "emacsmirror/org-html5presentation")

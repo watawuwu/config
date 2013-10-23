@@ -1,0 +1,4 @@
+(:name helm-gtags
+       :description "GNU GLOBAL helm interface"
+       :type github
+       :pkgname "syohex/emacs-helm-gtags")

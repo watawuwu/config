@@ -52,7 +52,6 @@
               ;; 関数の表示設定
               (setq fold-dwim-org/minor-mode t)
 
-              (setq gtags-mode nil)
               (setq eldoc-mode nil)
               (setq undo-tree-mode nil)
 

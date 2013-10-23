@@ -6,25 +6,25 @@
   (when (require 'helm-descbinds nil t))
 
    ;; Enable helm-gtags-mode
-  (when (require 'helm-gtags)
+   (when (require 'helm-gtags nil t)
 
-    ;; Enable helm-gtags-mode
-    (add-hook 'php-mode-hook 'helm-gtags-mode)
+     ;; customize
+     (setq helm-gtags-path-style 'relative)
+     (setq helm-gtags-ignore-case t)
+     (setq helm-gtags-read-only t)
+     (setq helm-gtags-auto-update t)
 
-    ;; customize
-    (setq helm-gtags-path-style 'relative)
-    (setq helm-gtags-ignore-case t)
-    (setq helm-gtags-read-only t)
-    (setq helm-gtags-auto-update t)
+     ;; key bindings
+     (add-hook 'helm-gtags-mode-hook
+               '(lambda ()
+                  (local-set-key (kbd "M-.") 'helm-gtags-find-tag)
+                  (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
+                  (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
+                  (local-set-key (kbd "M-g M-p") 'helm-gtags-parse-file)
+                  (local-set-key (kbd "M-,") 'helm-gtags-pop-stack)))
 
-    ;; key bindings
-    (add-hook 'helm-gtags-mode-hook
-              '(lambda ()
-                 (local-set-key (kbd "M-t") 'helm-gtags-find-tag)
-                 (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
-                 (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
-                 (local-set-key (kbd "M-g M-p") 'helm-gtags-parse-file)
-                 (local-set-key (kbd "M-,") 'helm-gtags-pop-stack))))
+     ;; Enable helm-gtags-mode
+     (add-hook 'php-mode-hook 'helm-gtags-mode))
 
   (when (require 'helm-ag nil t)
     (setq helm-ag-base-command "ag --nocolor --nogroup --ignore-case")

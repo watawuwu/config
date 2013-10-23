@@ -1,0 +1,4 @@
+(:name fold-dwim
+       :description "Unified user interface for Emacs folding modes"
+       :type github
+       :pkgname "emacsmirror/fold-dwim")

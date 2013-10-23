@@ -1,0 +1,4 @@
+(:name c-eldoc
+       :description "The silver searcher with helm interface"
+       :type github
+       :pkgname "nflath/c-eldoc")

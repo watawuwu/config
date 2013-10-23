@@ -1,0 +1,5 @@
+(:name apples-mode
+       :website "http://d.hatena.ne.jp/tequilasunset/20110116/p1"
+       :description "Major mode for editing and executing AppleScript code"
+       :type github
+       :pkgname "tequilasunset/apples-mode")

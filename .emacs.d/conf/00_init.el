@@ -19,7 +19,8 @@
            '(elscreen-tab-other-screen-face   ((t (:foreground "gray90" :background "gray30"))))
            (setq elscreen-tab-display-kill-screen nil)
            (setq elscreen-display-tab nil)
-           ))
+           )
+         (elscreen-start))
 
   ;; 表示位置
   (setq default-frame-alist
@@ -96,6 +97,7 @@
 ;; 日本語の設定
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
+
 
 ;; ;;;; ==========================================================================================================
 ;; ;;;; 一般設定
@@ -242,14 +244,6 @@
 ;;;; Elisp設定
 ;;;; ==========================================================================================================
 
-;; el-get
-;;(when (require 'el-get nil t)
-;; (el-get 'sync))
-
-
-;; git
-;;(require 'magit)
-
 ;; 自動コンパイル設定
 (when (require 'auto-async-byte-compile)
   (setq auto-async-byte-compile-exclude-files-regexp "/junk/")
@@ -257,38 +251,14 @@
   ;;(setq auto-async-byte-compile-display-function nil)
   (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode))
 
-;; 複数の機能をひとつのインターフェースに統合！！
-(when (require 'auto-install nil t)
-  ;; インストール先のディレクトリ
-  (setq auto-install-directory "~/.emacs.d/elisp")
-  ;; 起動時にEmacsWikiのページ名を補完候補に追加
-  (auto-install-update-emacswiki-package-name t)
-  ;; install-elisp.el互換モードにする
-  (auto-install-compatibility-setup)
-  ;; ediff関連のバッファを1つのフレームにまとめる
-  (setq ediff-window-setup-function 'ediff-setup-windows-plain))
-
-
-;; パッケージ管理
-(when (require 'package)
-  (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                           ("marmalade" . "http://marmalade-repo.org/packages/")
-                           ("melpa" . "http://melpa.milkbox.net/packages/")
-                           ("ELPA" . "http://tromey.com/elpa/")                  ))
-
-  ;;インストールするディレクトリを指定
-  (setq package-user-dir (concat user-emacs-directory "elpa"))
-  ;;インストールしたパッケージにロードパスを通してロード
-  (package-initialize))
-
 ;; 同じファイルを開いている場合にディレクトリ名を追加
 (when (require 'uniquify nil t)
   (setq uniquify-buffer-name-style 'forward))
 
 ;; ファイルを自動保存
-(when (require 'auto-save-buffers nil t )
-  ;; アイドル0.3秒で保存
-  (run-with-idle-timer 0.3 t 'auto-save-buffers))
+(when (require 'auto-save-buffers-enhanced)
+  (setq auto-save-buffers-enhanced-interval 0.3)
+  (auto-save-buffers-enhanced t))
 
 ;; 履歴にディレクトリを含める
 (require 'recentf-ext nil t)
@@ -329,7 +299,6 @@
 (when (require 'sequential-command-config nil t)
   (sequential-command-setup-keys))
 
-
 ;; カーソル位置を戻す
 (when (require 'point-undo nil t)
   (global-set-key (kbd "C-9") 'point-undo)
@@ -338,8 +307,47 @@
 ;; バッファのサマリーを表示する
 (when (require 'summarye nil t))
 
-;; @todo emacsからsudo操作
-;; (when (require 'sudo-ext))
+;; emacsからsudo操作
+;; (when (require 'sudo-ext)
+
+;;   ;; 自分以外のユーザのファイルを開いたら、sudoするか聞いてくる
+;;   (defun file-other-p (filename)
+;;     "Return t if file FILENAME created by others."
+;;     (if (file-exists-p filename)
+;;         (/= (user-real-uid) (nth 2 (file-attributes filename))) t))
+
+;;   (defun file-username (filename)
+;;     "Return File Owner."
+;;     (if (file-exists-p filename)
+;;         (user-full-name (nth 2 (file-attributes filename)))
+;;       (user-full-name (nth 2 (file-attributes (file-name-directory filename))))))
+
+;;   (defun th-rename-tramp-buffer ()
+;;     (when (file-remote-p (buffer-file-name))
+;;       (rename-buffer
+;;        (format "%s:%s"
+;;                (file-remote-p (buffer-file-name) 'method)
+;;                (buffer-name)))))
+
+;;   (add-hook 'find-file-hook
+;;             'th-rename-tramp-buffer)
+
+;;   (defadvice find-file (around th-find-file activate)
+;;     "Open FILENAME using tramp's sudo method if it's read-only."
+;;     (if (and (file-other-p (ad-get-arg 0))
+;;              (not (file-writable-p (ad-get-arg 0)))
+;;              (y-or-n-p (concat "File "
+;;                                (ad-get-arg 0) " is "
+;;                                (if (file-exists-p (ad-get-arg 0)) "read-only." "newer file.")
+;;                                "  Open it as "
+;;                                (file-username (ad-get-arg 0)) "? ")))
+;;         (th-find-file-sudo (ad-get-arg 0))
+;;       ad-do-it))
+
+;;   (defun th-find-file-sudo (file)
+;;     "Opens FILE with root privileges."
+;;     (interactive "F")
+;;     (set-buffer (find-file (concat "/sudo:" (file-username file) "@" (system-name) ":" file)))))
 
 ;; バッファ内を複数検索する
 (when (require 'color-moccur nil t)
@@ -357,7 +365,7 @@
 
 ;; シンプルノート
 (when (require 'simplenote nil t)
-  (require 'simplenote-config)
+  (require 'simplenote-config nil t)
   (simplenote-setup)
 
   ;; セーブと同時にSyncする関数
@@ -421,18 +429,9 @@
                  nxml-mode html-helper-mode css-mode js2-mode
                  sh-mode)))
 
-
 ;; undohistの設定
 (when (require 'undohist nil t)
   (undohist-initialize))
-
-;; undo-treeモードの設定
-(when (require 'undo-tree nil t)
-  (global-undo-tree-mode))
-
-;; apples-mode
-(when (require 'apples-mode nil t)
-  (add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode)))
 
 ;;;; ===================================================================================================
 ;;;; mode設定
@@ -457,6 +456,18 @@
 ;; yamlモード
 (when (require 'yaml-mode nil t)
   (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode)))
+
+;; undo-treeモードの設定
+(when (require 'undo-tree nil t)
+  (global-undo-tree-mode))
+
+;; apples-mode
+(when (require 'apples-mode nil t)
+  (add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode)))
+
+;; ブロックの折畳みと展開
+(when (require 'fold-dwim nil t)
+  (require 'fold-dwim-org nil t))
 
 ;; サーバ起動
 (when (server-start)

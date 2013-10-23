@@ -1,0 +1,4 @@
+(:name pod-mode
+       :description "Emacs syntax highlighting for Perl POD"
+       :type github
+       :pkgname "renormalist/emacs-pod-mode")

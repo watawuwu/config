@@ -5,6 +5,10 @@
 ;;; diredを便利にする
 (when (require 'dired-x nil t))
 
+
+;; use ls-options --dired
+(setq dired-use-ls-dired t)
+
 (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
 
 ;; diredでフラグが付けられたファイルを拡張子に関連付けられたアプリケーションを開く
@@ -50,7 +54,7 @@
         (kill-buffer curbuf))))
 (define-key dired-mode-map (kbd "p") 'my/anything-dired)
 
-; フォルダ移動時にバッファを生成しない
+                                        ; フォルダ移動時にバッファを生成しない
 (defun my/dired-advertised-find-file ()
   (interactive)
   (let ((kill-target (current-buffer))

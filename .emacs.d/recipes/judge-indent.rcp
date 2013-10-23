@@ -1,0 +1,4 @@
+(:name judge-indent
+       :description "auto-save-buffers-enhanced"
+       :type github
+       :pkgname "yascentur/judge-indent-el")
