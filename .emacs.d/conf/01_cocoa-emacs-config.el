@@ -47,20 +47,21 @@
      (setq locale-coding-system 'utf-8-hfs))
 
 ;; (require 'migemo)
-(defvar migemo-command "/usr/local/bin/cmigemo")
-(defvar migemo-options '("-q" "--emacs"))
-(defvar migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
-(defvar migemo-user-dictionary nil)
-(defvar migemo-coding-system 'utf-8-unix)
-(defvar migemo-regex-dictionary nil)
+(setq migemo-command "/usr/local/bin/cmigemo")
+(setq migemo-options '("-q" "--emacs"))
+(setq migemo-dictionary "/usr/local/share/migemo/utf-8/migemo-dict")
+(setq migemo-user-dictionary nil)
+(setq migemo-coding-system 'utf-8-unix)
+(setq migemo-regex-dictionary nil)
 (load-library "migemo")
 (migemo-init)
 ;; これがないとincremental-searchで検索がスキップされる
 (setq search-whitespace-regexp nil)
 
-
-
 ;; ブラウザをchromeに変更
-(defvar browse-url-browser-function 'browse-url-generic)
-(defvar browse-url-generic-program "open")
+(setq browse-url-browser-function 'browse-url-generic)
+(setq browse-url-generic-program "open")
 
+;; for ls --dired
+(when (require 'ls-lisp)
+  (setq ls-lisp-use-insert-directory-program nil))

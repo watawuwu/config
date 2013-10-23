@@ -1,0 +1,4 @@
+(:name helm-ag
+       :description "The silver searcher with helm interface"
+       :type github
+       :pkgname "syohex/emacs-helm-ag")

@@ -1,0 +1,4 @@
+(:name helm-migemo
+       :description "helm-migemo"
+       :type github
+       :pkgname "emacs-helm/helm-migemo")

@@ -34,8 +34,6 @@
   (define-key org-mode-map (kbd "C-j") 'newline)
   (define-key org-mode-map (kbd "C-,") (lambda () (interactive) (my-operate-buffer 1)))
 
-  (org-remember-insinuate)
-
   ;; メモを格納するorgファイルの設定
   (setq org-directory "~/dropbox/memo")
   (setq org-default-notes-file (expand-file-name "misc.org" org-directory))
@@ -44,19 +42,20 @@
   (setq org-agenda-files (list org-directory))
   (global-set-key (kbd "C-c a") 'org-agenda)
 
+
   ;; テンプレートの設定
-  (setq org-remember-templates
-        '(("Misc" ?c "** %?\n    %i\n    %t" nil "misc")
-          ("Report" ?r "** %?\n    %i\n    %t" "report.org" "report")
-          ("Todo" ?t "** TODO %?\n    %i\n    %t" "todo.org" "todo")
-          ("Memo" ?m "* %?\n    %i\n    %t" nil nil)))
+  (setq org-capture-templates
+        '(("t" "Todo" entry (file+headline "todo.org" "Tasks")
+           "* TODO %?\n %i\n %a")
+          ("c" "Misc" entry (file+datetree "misc.org")
+           "* %?\nEntered on %U\n %i\n %a")))
 
   ;; テンプレートの選択
   (setq org-use-fast-todo-selection t)
   (setq org-todo-keywords
         '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "CONFIRM(m)"  "|" "DONE(x)" "CANCEL(c)")
           (sequence "APPT(a)" "|" "DONE(x)" "CANCEL(c)")))
- 
+
   ;; 予定表に使うorgファイルのリスト
   (setq org-agenda-files (list org-directory))
 
@@ -95,7 +94,7 @@
 
   (defun org-new-file-get-name ()
     (set (make-local-variable 'org-new-file-name)
-         (read-string "New file name: " 
+         (read-string "New file name: "
                       (or org-new-file-name
                           (file-name-nondirectory
                            (buffer-file-name))))))
@@ -103,8 +102,8 @@
   (defun org-remember-new-file ()
     (interactive)
     (let* ((prefix (org-new-file-get-name))
-           (org-remember-templates
+           (org-capture-templates
             `(("New file" ?n "* %(identity prefix)%?\n   \n   %a\n   %t"
                ,(concat org-new-file-name ".el")  nil))))
-      (org-remember)))
+      (org-capture)))
   )

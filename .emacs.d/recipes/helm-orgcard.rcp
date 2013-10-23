@@ -1,0 +1,4 @@
+(:name helm-orgcard
+       :description "Org card with helm interface"
+       :type github
+       :pkgname "emacs-helm/helm-orgcard")

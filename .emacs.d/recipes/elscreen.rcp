@@ -1,0 +1,7 @@
+(:name elscreen
+     :description "Elscreen"
+	 :type github
+	 :pkgname "shosti/elscreen")
+					 
+
+

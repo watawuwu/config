@@ -1,9 +1,11 @@
 ac-comphist.dat
 auto-save-list/
-history/
+bookmarks
+history
 private/
 tramp
 undohist/
 url/
 el-get/emacs-w3m/config.status
 *.elc
+orgcard.txt

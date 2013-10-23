@@ -42,9 +42,6 @@
              ;; センテンスの終了である ';' を入力したら、自動改行+インデント
 ;;             (c-toggle-auto-hungry-state 1)
              (set (make-local-variable 'eldoc-idle-delay) 0.20)
-             ;; gtagsの設定
-             (gtags-mode 1)
-             (gtags-make-complete-list)
              (c-turn-on-eldoc-mode)
              )
           )
