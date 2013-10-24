@@ -42,10 +42,10 @@
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
-       "://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    ( (el-get-master-branch)
-      (-char (point-max))
-      (-print-last-sexp))))
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (let (el-get-master-branch)
+      (goto-char (point-max))
+      (eval-print-last-sexp))))
 ;; my recipes directory
 (add-to-list 'el-get-recipe-path (concat user-emacs-directory "recipes"))
 
