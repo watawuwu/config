@@ -19,6 +19,9 @@
   ;; M-!
   (push "*Shell Command Output*" popwin:special-display-config)
 
+  ;; org-src
+  (push '("*Org Src" :regexp t) popwin:special-display-config)
+
   ;; simplenote
   ;;(push '("simple" :regexp t) popwin:special-display-config)
   (push '("*Simplenote") popwin:special-display-config)
