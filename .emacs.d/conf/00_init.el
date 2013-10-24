@@ -22,15 +22,6 @@
            )
          (elscreen-start))
 
-  ;; 表示位置
-  (setq default-frame-alist
-        (append (list
-                 '(width  . 220)
-                 '(height . 60)
-                 '(top    . 100)
-                 '(left   . 200))
-                initial-frame-alist))
-
   ;; ツールバーを消す
   (tool-bar-mode -1)
 
@@ -53,13 +44,10 @@
 
 ;; 現在行にをつける
 (global-hl-line-mode t)
-;; hl-lineのカラー
-;;(set-face-background 'hl-line "#220")
 
 ;; 対応する括弧を強調する
 (show-paren-mode t)
 (setq show-paren-delay 0)
-;;(setq show-paren-style 'mixed)
 (setq show-paren-style 'parenthesis)
 
 ;; 選択領域の色
