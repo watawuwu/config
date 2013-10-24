@@ -5,26 +5,26 @@
   (when (require 'helm-ls-git nil t))
   (when (require 'helm-descbinds nil t))
 
-   ;; Enable helm-gtags-mode
-   (when (require 'helm-gtags nil t)
+  ;; Enable helm-gtags-mode
+  (when (require 'helm-gtags nil t)
 
-     ;; customize
-     (setq helm-gtags-path-style 'relative)
-     (setq helm-gtags-ignore-case t)
-     (setq helm-gtags-read-only t)
-     (setq helm-gtags-auto-update t)
+    ;; customize
+    (setq helm-gtags-path-style 'relative)
+    (setq helm-gtags-ignore-case t)
+    (setq helm-gtags-read-only t)
+    (setq helm-gtags-auto-update t)
 
-     ;; key bindings
-     (add-hook 'helm-gtags-mode-hook
-               '(lambda ()
-                  (local-set-key (kbd "M-.") 'helm-gtags-find-tag)
-                  (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
-                  (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
-                  (local-set-key (kbd "M-g M-p") 'helm-gtags-parse-file)
-                  (local-set-key (kbd "M-,") 'helm-gtags-pop-stack)))
+    ;; key bindings
+    (add-hook 'helm-gtags-mode-hook
+              '(lambda ()
+                 (local-set-key (kbd "M-.") 'helm-gtags-find-tag)
+                 (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
+                 (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
+                 (local-set-key (kbd "M-g M-p") 'helm-gtags-parse-file)
+                 (local-set-key (kbd "M-,") 'helm-gtags-pop-stack)))
 
-     ;; Enable helm-gtags-mode
-     (add-hook 'php-mode-hook 'helm-gtags-mode))
+    ;; Enable helm-gtags-mode
+    (add-hook 'php-mode-hook 'helm-gtags-mode))
 
   (when (require 'helm-ag nil t)
     (setq helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
@@ -75,4 +75,14 @@
   (global-set-key (kbd "C-<tab>") 'helm-elscreen)
 
   (eval-after-load "helm"
-    '(define-key helm-map (kbd "C-h") 'delete-backward-char)))
+    '(define-key helm-map (kbd "C-h") 'delete-backward-char))
+
+  (custom-set-faces
+   '(helm-candidate-number ((t (:background "wheat4" :foreground "black"))))
+   '(helm-selection ((t (:background "gray10" :foreground "gray75" :underline nil))))
+   '(helm-source-header ((t (:background "RosyBrown3" :foreground "gray25" :box (:line-width 1 :color "grey75" :style pressed-button) :weight bold :height 1.0 :width expanded :family "Sans Serif"))))
+   '(helm-visible-mark ((t (:background "gray10" :foreground "gray86"))))
+   '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+   '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+
+  )
