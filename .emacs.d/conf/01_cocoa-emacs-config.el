@@ -10,7 +10,7 @@
   (let* (
          (fontset-name "myfonts") ; フォントセットの名前
          (size 14)                ; ASCIIフォントのサイズ [9/10/12/14/15/17/19/20/...]
-         (asciifont "Essential PragmataPro")    ; ASCIIフォント
+         (asciifont "Essential PragmataPro for Powerline")    ; ASCIIフォント
          (jpfont "Migu 2M")       ; 日本語フォント
          ;; (asciifont "Migu 2M")    ; ASCIIフォント
          ;; (jpfont "Migu 2M")       ; 日本語フォント
