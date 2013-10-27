@@ -10,8 +10,10 @@
   (let* (
          (fontset-name "myfonts") ; フォントセットの名前
          (size 14)                ; ASCIIフォントのサイズ [9/10/12/14/15/17/19/20/...]
-         (asciifont "Migu 2M")    ; ASCIIフォント
+         (asciifont "Essential PragmataPro")    ; ASCIIフォント
          (jpfont "Migu 2M")       ; 日本語フォント
+         ;; (asciifont "Migu 2M")    ; ASCIIフォント
+         ;; (jpfont "Migu 2M")       ; 日本語フォント
          (font (format "%s-%d:weight=normal:slant=normal" asciifont size))
          (fontspec (font-spec :family asciifont))
          (jp-fontspec (font-spec :family jpfont))
