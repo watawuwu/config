@@ -8,8 +8,12 @@
 
   (defun org-insert-example-block ()
     (interactive)
-    (insert "#+BEGIN_SRC\n\n#+END_SRC")
-    (goto-char (- (point) 14)))
+    (org-indent-line)
+    (insert "#+BEGIN_SRC ")
+    (save-excursion
+      (org-return)
+      (insert "#+END_SRC")
+      (org-indent-line)))
 
   ;; exampleテンプレを挿入
   (define-key org-mode-map (kbd "C-c e") 'org-insert-example-block)
@@ -17,7 +21,7 @@
   (defun org-insert-upheading (arg)
     "1レベル上の見出しを入力する。"
     (interactive "P")
-    (org-insert-heading arg)
+    (org-insert-heading-dwinading arg)
     (cond ((org-on-heading-p) (org-do-promote))
           ((org-at-item-p) (org-indent-item -1))))
 
@@ -30,9 +34,9 @@
       (16 (org-insert-upheading nil))
       (t  (org-insert-heading nil))))
 
-  (define-key org-mode-map (kbd "C-m") 'org-insert-heading-dwin)
-  (define-key org-mode-map (kbd "C-j") 'newline)
-  (define-key org-mode-map (kbd "C-,") (lambda () (interactive) (my-operate-buffer 1)))
+  (define-key org-mode-map (kbd "C-m") 'org-return-indent)
+  (define-key org-mode-map (kbd "C-j") 'org-return)
+  ;; (define-key org-mode-map (kbd "C-,") (lambda () (interactive) (my-operate-buffer 1)))
 
   ;; メモを格納するorgファイルの設定
   (setq org-directory "~/dropbox/memo")
