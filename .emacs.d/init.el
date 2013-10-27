@@ -131,7 +131,10 @@
         'pod-mode
         'remember
         'elscreen
-        'markdown-mode)
+        'markdown-mode
+        'ruby-mode
+        'ruby-electric
+        'ruby-block)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
