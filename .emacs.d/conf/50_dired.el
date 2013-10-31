@@ -39,6 +39,7 @@
             (define-key dired-mode-map (kbd "o") 'dired-open-file)
             (define-key dired-mode-map (kbd "C-c o") 'dired-open-files)
             (define-key dired-mode-map (kbd "C-t c") 'elscreen-create)
+            (define-key dired-mode-map (kbd "C-t C-t") 'other-window)
             ))
 
 ;; diredの表示設定
