@@ -2,6 +2,8 @@
 ;;;; initialization
 ;;;; ==========================================================================================================
 
+
+
 ;; Warning restraint at the time of the compilation.
 (setq byte-compile-warnings
       '(free-vars unresolved callargs redefine obsolete noruntime
@@ -38,13 +40,6 @@
 ;; add load-path directory
 (add-to-load-path "el-get")
 
-;; Setting does not become effective
-;; (when (require 'shellenv nil t)
-;;   (custom-set-variables
-;;    '(shellenv/shell 'bash))
-;;   (shellenv/setpath))
-
-
 ;;;; ==========================================================================================================
 ;;;; el-get
 ;;;; ==========================================================================================================
@@ -61,6 +56,7 @@
 (add-to-list 'el-get-recipe-path (concat user-emacs-directory "recipes"))
 
 (el-get 'sync
+        'cl-lib
         'apel
         'apache-mode
         'apples-mode
@@ -69,7 +65,6 @@
         'auto-highlight-symbol
         'auto-save-buffers-enhanced
         'c-eldoc
-        'cl-lib
         'color-moccur
         'confluence-el
         'ctags
