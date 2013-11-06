@@ -2,7 +2,7 @@
     path = .gitconfig.user
 
 [core]
-    excludesfile = $HOME/.gitignore
+	excludesfile = ~/.gitignore
     autocrlf = input
     pager = lv -c
     whitespace = trailing-space,space-before-tab,-indent-with-non-tab,-cr-at-eol
