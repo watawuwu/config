@@ -6,7 +6,7 @@
   ;; (setq php-mode-force-pear t)
   ;;*.phpのファイルのときにphp-modeを自動起動する
   (add-to-list 'auto-mode-alist '
-               ("\\.ctp\\'\\|\\.phtml\\'" . php-mode))
+               ("\\.inc\\'\\|\\.ctp\\'\\|\\.phtml\\'" . php-mode))
 
   (when (require 'align nil t)
     (add-to-list 'align-rules-list

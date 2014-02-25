@@ -21,7 +21,7 @@
   (defun org-insert-upheading (arg)
     "1レベル上の見出しを入力する。"
     (interactive "P")
-    (org-insert-heading-dwinading arg)
+    (org-insert-heading-dwin arg)
     (cond ((org-on-heading-p) (org-do-promote))
           ((org-at-item-p) (org-indent-item -1))))
 
@@ -29,12 +29,14 @@
     "現在と同じレベルの見出しを入力する。
     C-uをつけると1レベル上、C-u C-uをつけると1レベル下の見出しを入力する"
     (interactive "p")
+
     (case arg
       (4  (org-insert-subheading nil))
       (16 (org-insert-upheading nil))
       (t  (org-insert-heading nil))))
 
-  (define-key org-mode-map (kbd "C-m") 'org-return-indent)
+  ;;(define-key org-mode-map (kbd "C-m") 'org-return-indent)
+  (define-key org-mode-map (kbd "C-m") 'org-insert-heading-dwin)
   (define-key org-mode-map (kbd "C-j") 'org-return)
   ;; (define-key org-mode-map (kbd "C-,") (lambda () (interactive) (my-operate-buffer 1)))
 
