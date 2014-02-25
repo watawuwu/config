@@ -61,12 +61,29 @@
 (transient-mark-mode 1)
 
 ;;タブ幅を 4 に設定
-(setq-default tab-width 4)
-(setq tab-width 4)
+;; (setq-default tab-width 4)
+;; (setq tab-width 4)
 ;;タブ幅の倍数を設定
-(setq tab-stop-list
-      '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60))
-;;      '(2 4 6 8 10 12 14 16 18 20 22 24 26 28 30))
+;; (setq tab-stop-list
+;;      '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60))
+(defun set-aurora-tab-width (num &optional local redraw)
+  "タブ幅をセットします。タブ5とかタブ20も設定できたりします。
+localが non-nilの場合は、カレントバッファでのみ有効になります。
+redrawが non-nilの場合は、Windowを再描画します。"
+  (interactive "nTab Width: ")
+  (when local
+    (make-local-variable 'tab-width)
+    (make-local-variable 'tab-stop-list))
+  (setq tab-width num)
+  (setq tab-stop-list ())
+  (while (<= num 256)
+    (setq tab-stop-list `(,@tab-stop-list ,num))
+    (setq num (+ num tab-width)))
+  (when redraw (redraw-display)) tab-width)
+
+(set-aurora-tab-width (setq default-tab-width (setq-default tab-width 4)))
+
+
 ;;タブではなくスペースを使う
 (setq-default indent-tabs-mode nil)
 (setq indent-line-function 'indent-relative-maybe)
