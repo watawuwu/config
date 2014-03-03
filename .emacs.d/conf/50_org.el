@@ -38,6 +38,7 @@
   ;;(define-key org-mode-map (kbd "C-m") 'org-return-indent)
   (define-key org-mode-map (kbd "C-m") 'org-insert-heading-dwin)
   (define-key org-mode-map (kbd "C-j") 'org-return)
+
   ;; (define-key org-mode-map (kbd "C-,") (lambda () (interactive) (my-operate-buffer 1)))
 
   ;; メモを格納するorgファイルの設定
