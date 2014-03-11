@@ -92,10 +92,6 @@
   (add-hook 'org-export-html-final-hook
             '(lambda () (perform-replace "@&#x40;&amp;" "&" nil nil nil)))
 
-  ;; HTML5で出力
-  (require 'org-html5presentation nil t)
-
-
   ;; 別のファイルにメモを取る
   (defvar org-new-file-name nil)
 

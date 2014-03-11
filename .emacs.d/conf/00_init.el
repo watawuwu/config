@@ -43,7 +43,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; 現在行にをつける
-(global-hl-line-mode t)
+;; 重いらしいので一旦コメントアウト
+;;(global-hl-line-mode t)
 
 ;; 対応する括弧を強調する
 (show-paren-mode t)

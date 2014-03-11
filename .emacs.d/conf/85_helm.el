@@ -5,26 +5,26 @@
   (when (require 'helm-ls-git nil t))
   (when (require 'helm-descbinds nil t))
 
-  ;; Enable helm-gtags-mode
-  (when (require 'helm-gtags nil t)
+;;  ;; Enable helm-gtags-mode
+;;  (when (require 'helm-gtags nil t)
+;;
+;;    ;; customize
+;;    (setq helm-gtags-path-style 'relative)
+;;    (setq helm-gtags-ignore-case t)
+;;    (setq helm-gtags-read-only t)
+;;    (setq helm-gtags-auto-update t)
 
-    ;; customize
-    (setq helm-gtags-path-style 'relative)
-    (setq helm-gtags-ignore-case t)
-    (setq helm-gtags-read-only t)
-    (setq helm-gtags-auto-update t)
-
-    ;; key bindings
-    (add-hook 'helm-gtags-mode-hook
-              '(lambda ()
-                 (local-set-key (kbd "M-.") 'helm-gtags-find-tag)
-                 (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
-                 (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
-                 (local-set-key (kbd "M-g M-p") 'helm-gtags-parse-file)
-                 (local-set-key (kbd "M-,") 'helm-gtags-pop-stack)))
-
-    ;; Enable helm-gtags-mode
-    (add-hook 'php-mode-hook 'helm-gtags-mode))
+;;    ;; key bindings
+;;    (add-hook 'helm-gtags-mode-hook
+;;              '(lambda ()
+;;                 (local-set-key (kbd "M-.") 'helm-gtags-find-tag)
+;;                 (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
+;;                 (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
+;;                 (local-set-key (kbd "M-g M-p") 'helm-gtags-parse-file)
+;;                 (local-set-key (kbd "M-,") 'helm-gtags-pop-stack)))
+;;
+;;    ;; Enable helm-gtags-mode
+;;    (add-hook 'php-mode-hook 'helm-gtags-mode))
 
   (when (require 'helm-ag nil t)
     (setq helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
@@ -55,7 +55,7 @@
        helm-c-source-recentf
        helm-c-source-file-cache
        helm-c-source-files-in-current-dir
-       helm-source-ctags
+;;       helm-source-ctags
        ;;       helm-c-source-git-project-for
        helm-c-source-findutils)
      "*helm file list*"))
