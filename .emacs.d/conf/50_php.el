@@ -50,7 +50,7 @@
                  (flex-autopair-mode t))
 
               ;; 関数の表示設定
-              (setq fold-dwim-org/minor-mode t)
+              ;; (setq fold-dwim-org/minor-mode t)
 
               (setq eldoc-mode nil)
               (setq undo-tree-mode nil)

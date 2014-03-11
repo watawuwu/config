@@ -5,6 +5,11 @@
 
 (setq x-select-enable-clipboard t)
 
+(setq default-input-method "MacOSX")
+
+;; RGB用設定
+(setq ns-use-srgb-colorspace t)
+
 ;; フォント設定
 (when window-system
   (let* (
@@ -65,5 +70,6 @@
 (setq browse-url-generic-program "open")
 
 ;; for ls --dired
-(when (require 'ls-lisp)
-  (setq ls-lisp-use-insert-directory-program nil))
+ (when (require 'ls-lisp)
+   (setq ls-lisp-use-insert-directory-program nil))
+

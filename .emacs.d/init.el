@@ -13,6 +13,16 @@
 (when (> emacs-major-version 23)
   (defvar user-emacs-directory "~/.emacs.d"))
 
+;; After 24 version removed in emacs 24.4, add it for now
+;; bytecompileするとエラーになる
+(defun ad-advised-definition-p (definition)
+  "Return non-nil if DEFINITION was generated from advice information."
+  (if (or (ad-lambda-p definition)
+          (macrop definition)
+          (ad-compiled-p definition))
+      (let ((docstring (ad-docstring definition)))
+        (and (stringp docstring)
+             (get-text-property 0 'dynamic-docstring-function docstring)))))
 
 (defun set-exec-path-from-shell-PATH ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
