@@ -20,7 +20,8 @@
            (setq elscreen-tab-display-kill-screen nil)
            (setq elscreen-display-tab nil)
            )
-         (elscreen-start))
+         (elscreen-start)
+         )
 
   ;; ツールバーを消す
   (tool-bar-mode -1)
@@ -29,7 +30,8 @@
   (menu-bar-mode -1)
 
   ;; スクロールバーを消す
-  (scroll-bar-mode -1))
+  (scroll-bar-mode -1)
+  )
 
 ;; 改行コードを表示
 (setq eol-mnemonic-dos "(CRLF)")
@@ -479,3 +481,10 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (when (server-start)
   (defun iconify-emacs-when-server-is-done ()
     (unless 'server-clients (iconify-frame))))
+
+
+(when (require 'foreign-regexp nil t)
+  (custom-set-variables
+   '(foreign-regexp/regexp-type 'perl) ;; Choose by your preference.
+   '(reb-re-syntax 'foreign-regexp)) ;; Tell re-builder to use foreign regexp.
+  )

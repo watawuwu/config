@@ -23,6 +23,14 @@ alias ctags="/usr/local/bin/ctags"
 # diff
 alias cdiff="colordiff --side-by-side"
 
+# url encode/decode
+# alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
+# alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
+
+alias urlencode='php -r "echo(urlencode(fgets(STDIN)) . PHP_EOL);"'
+alias urldecode='php -r "echo(urldecode(fgets(STDIN)) . PHP_EOL);"'
+
+
 if [ `uname` = "Darwin" ]; then
     # for osx
     #============================================================================================

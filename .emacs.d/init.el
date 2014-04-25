@@ -49,6 +49,7 @@
 
 ;; add load-path directory
 (add-to-load-path "el-get")
+(add-to-load-path "ensime_2.10.0-0.9.8.9")
 
 ;;;; ==========================================================================================================
 ;;;; el-get
@@ -150,7 +151,9 @@
         'markdown-mode
         'ruby-mode
         'ruby-electric
-        'ruby-block)
+        'ruby-block
+        'web-mode
+        'foreign-regexp)
 
 ;;;; ==========================================================================================================
 ;;;; other settings

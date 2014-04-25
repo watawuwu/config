@@ -4,7 +4,7 @@
 
 
 ;; 見出しのキーバインド設定
-(when (require 'org)
+(when (require 'org nil t)
 
   (defun org-insert-example-block ()
     (interactive)

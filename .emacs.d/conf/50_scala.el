@@ -1,7 +1,9 @@
 ;; scala-mode
 
 (when (require 'scala-mode2 nil t)
-;;  (require 'scala-mode-feature-electric nil t)
+
+
+  ;;  (require 'scala-mode-feature-electric nil t)
   (require 'ensime nil t)
 
   (defun my-scala-switch-to-interpreter ()
@@ -41,14 +43,14 @@
 
   (add-hook 'scala-mode-hook
             (lambda ()
-;;              (local-set-key (kbd "C-m") 'my-scala-newline)
+              ;;              (local-set-key (kbd "C-m") 'my-scala-newline)
               (local-set-key (kbd "C-c C-a") 'align-current)
-;;              (define-key scala-mode-map (kbd "C-c C-z") 'my-scala-switch-to-interpreter)
-;;              (define-key scala-mode-inf-map (kbd "C-c C-z") 'my-scala-back-to-editing-buffer)
-;;              (local-set-key (kbd "C-M-j") 'join-line)
-;;              (local-set-key (kbd "<backtab>") 'scala-indent:indent-with-reluctant-strategy)
-;;              (scala-electric-mode t)
-;;              (flex-autopair-mode t)
+              ;;              (define-key scala-mode-map (kbd "C-c C-z") 'my-scala-switch-to-interpreter)
+              ;;              (define-key scala-mode-inf-map (kbd "C-c C-z") 'my-scala-back-to-editing-buffer)
+              ;;              (local-set-key (kbd "C-M-j") 'join-line)
+              ;;              (local-set-key (kbd "<backtab>") 'scala-indent:indent-with-reluctant-strategy)
+              ;;              (scala-electric-mode t)
+              ;;              (flex-autopair-mode t)
               ))
 
   (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
