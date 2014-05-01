@@ -71,7 +71,7 @@
   (global-set-key (kbd "M-?") 'helm-descbinds)
   (global-set-key (kbd "M-x") 'helm-M-x)
   (define-key isearch-mode-map (kbd "C-o") 'helm-occur-from-isearch)
-  (global-set-key (kbd "M-s") 'helm-occur)
+  ;; (global-set-key (kbd "M-s") 'helm-occur)
   (global-set-key (kbd "C-<tab>") 'helm-elscreen)
 
   (eval-after-load "helm"
