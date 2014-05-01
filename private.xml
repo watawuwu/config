@@ -120,6 +120,12 @@
             <autogen>--KeyToKey-- KeyCode::DOT,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::DOT</autogen>
         </item>
         <item>
+            <name>Comment out</name>
+            <identifier>private.orz.fuscus.change_alt_semicolon_to_commentout</identifier>
+            <only>INTELIJ</only>
+            <autogen>--KeyToKey-- KeyCode::SEMICOLON,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::SEMICOLON</autogen>
+        </item>
+        <item>
             <name>Move caret text end</name>
             <identifier>private.orz.fuscus.change_alt_shift_dot_to_move_caret_text_end</identifier>
             <only>INTELIJ</only>
