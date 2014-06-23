@@ -477,6 +477,9 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (when (require 'fold-dwim nil t)
   (require 'fold-dwim-org nil t))
 
+;; Nginx-mode
+(when (require 'nginx-mode nil t))
+
 ;; サーバ起動
 (when (server-start)
   (defun iconify-emacs-when-server-is-done ()
