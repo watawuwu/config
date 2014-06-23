@@ -30,6 +30,8 @@ alias cdiff="colordiff --side-by-side"
 alias urlencode='php -r "echo(urlencode(fgets(STDIN)) . PHP_EOL);"'
 alias urldecode='php -r "echo(urldecode(fgets(STDIN)) . PHP_EOL);"'
 
+alias sqllint="php ${HOME}/repo/sql-formatter/examples/cli.php"
+
 
 if [ `uname` = "Darwin" ]; then
     # for osx

@@ -86,6 +86,11 @@ export PATH=$PATH:$SBT_HOME/bin
 export PLAY_HOME=${HOME}"/opt/play"
 export PATH=$PATH:$PLAY_HOME
 
+# pvtivator
+export ACTIVATOR_HOME=${HOME}"/opt/activator"
+export PATH=$PATH:$ACTIVATOR_HOME
+
+
 # Dstat
 export DSTAT_MYSQL_USER=root
 export DSTAT_MYSQL_PWD=password

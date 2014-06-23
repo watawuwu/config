@@ -153,7 +153,8 @@
         'ruby-electric
         'ruby-block
         'web-mode
-        'foreign-regexp)
+        'foreign-regexp
+		'nginx-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
