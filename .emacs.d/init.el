@@ -77,7 +77,7 @@
         'auto-save-buffers-enhanced
         'c-eldoc
         'color-moccur
-        'confluence-el
+        'confluence
         'ctags
         'cycle-buffer
         'css-mode
@@ -154,7 +154,7 @@
         'ruby-block
         'web-mode
         'foreign-regexp
-		'nginx-mode)
+        'nginx-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
