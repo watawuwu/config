@@ -30,6 +30,9 @@ alias cdiff="colordiff --side-by-side"
 alias urlencode='php -r "echo(urlencode(fgets(STDIN)) . PHP_EOL);"'
 alias urldecode='php -r "echo(urldecode(fgets(STDIN)) . PHP_EOL);"'
 
+alias unixtime="date +%s"
+alias to_unixtime="date +%s --date"
+
 alias sqllint="php ${HOME}/repo/sql-formatter/examples/cli.php"
 
 
