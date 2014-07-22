@@ -53,34 +53,32 @@
               (c-set-offset 'arglist-intro 'ywb-php-lineup-arglist-intro)
               (c-set-offset 'arglist-close 'ywb-php-lineup-arglist-close)))
 
-              ;; 開きカッコの前に空白を入れない
-              (setq parens-require-spaces nil)
+  ;; 開きカッコの前に空白を入れない
+  (setq parens-require-spaces nil)
 
-              ;; カッコ閉じ設定
-              (when (require 'flex-autopair nil t)
-                 (flex-autopair-mode t))
+  ;; カッコ閉じ設定
+  (when (require 'flex-autopair nil t)
+    (flex-autopair-mode t))
 
-              ;; 関数の表示設定
-              ;; (setq fold-dwim-org/minor-mode t)
+  ;; 関数の表示設定
+  ;; (setq fold-dwim-org/minor-mode t)
 
-              (setq eldoc-mode nil)
-              (setq undo-tree-mode nil)
+  (setq eldoc-mode nil)
+  (setq undo-tree-mode nil)
 
-              ;; (defun electric-pair ()
-              ;;   "If at end of line, insert character pair without surrounding spaces.
-              ;;      Otherwise, just insert the typed character."
-              ;;   (interactive)
-              ;;   (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
+  ;; (defun electric-pair ()
+  ;;   "If at end of line, insert character pair without surrounding spaces.
+  ;;      Otherwise, just insert the typed character."
+  ;;   (interactive)
+  ;;   (if (eolp) (let (parens-require-spaces) (insert-pair)) (self-insert-command 1)))
 
 
-              ;; (define-key php-mode-map "(" 'insert-pair)
-              ;; (define-key php-mode-map "\"" 'insert-pair)
-              ;; (define-key php-mode-map "'" 'insert-pair)
+  ;; (define-key php-mode-map "(" 'insert-pair)
+  ;; (define-key php-mode-map "\"" 'insert-pair)
+  ;; (define-key php-mode-map "'" 'insert-pair)
 
-              ;; (define-key php-mode-map "{" 'electric-pair)
+  ;; (define-key php-mode-map "{" 'electric-pair)
 
-              (define-key php-mode-map (kbd "C-.") (lambda () (interactive) (my-operate-buffer 2)))
-
-              ))
+  (define-key php-mode-map (kbd "C-.") (lambda () (interactive) (my-operate-buffer 2)))
 
   )
