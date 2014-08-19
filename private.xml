@@ -16,6 +16,7 @@
     <appname>WEB_STORM</appname>
     <equal>com.jetbrains.WebStorm</equal>
   </appdef>
+
   <replacementdef>
     <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
     <replacementvalue>
@@ -141,6 +142,13 @@
             <only>INTELIJ</only>
             <autogen>--KeyToKey-- KeyCode::B,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::B</autogen>
         </item>
+        <item>
+            <name>Escape</name>
+            <identifier>private.orz.fuscus.change_ctl_g_to_escape</identifier>
+            <only>INTELIJ</only>
+            <autogen>--KeyToKey-- KeyCode::G,ModifierFlag::CONTROL_L, KeyCode::ESCAPE</autogen>
+        </item>
+
 
     </item>
     <item>
