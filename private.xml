@@ -10,10 +10,8 @@
   </deviceproductdef>
   <appdef>
     <appname>INTELIJ</appname>
+    <equal>com.jetbrains.intellij</equal>
     <equal>com.jetbrains.intellij.ce</equal>
-  </appdef>
-  <appdef>
-    <appname>WEB_STORM</appname>
     <equal>com.jetbrains.WebStorm</equal>
   </appdef>
 
@@ -150,44 +148,5 @@
         </item>
 
 
-    </item>
-    <item>
-        <name>For Web Storm</name>
-        <item>
-            <name>Kill ring save</name>
-            <identifier>private.orz.fuscus.web_storm.change_alt_w_to_kill_ring_save</identifier>
-            <only>WEB_STORM</only>
-            <autogen>--KeyToKey-- KeyCode::W,ModifierFlag::OPTION_L, KeyCode::C, ModifierFlag::OPTION_L</autogen>
-        </item>
-        <item>
-            <name>Kill word</name>
-            <identifier>private.orz.fuscus.web_storm.change_alt_d_to_kill_word</identifier>
-            <only>WEB_STORM</only>
-            <autogen>--KeyToKey-- KeyCode::D,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::D</autogen>
-        </item>
-        <item>
-            <name>Scroll down command</name>
-            <identifier>private.orz.fuscus.web_storm.change_alt_v_to_scroll_down_command</identifier>
-            <only>WEB_STORM</only>
-            <autogen>--KeyToKey-- KeyCode::V,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::V</autogen>
-        </item>
-        <item>
-            <name>Declaration</name>
-            <identifier>private.orz.fuscus.web_storm.change_alt_dot_to_declaration</identifier>
-            <only>WEB_STORM</only>
-            <autogen>--KeyToKey-- KeyCode::DOT,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::DOT</autogen>
-        </item>
-        <item>
-            <name>Move caret text end</name>
-            <identifier>private.orz.fuscus.web_storm.change_alt_shift_dot_to_move_caret_text_end</identifier>
-            <only>WEB_STORM</only>
-            <autogen>--KeyToKey-- KeyCode::DOT,ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L, KeyCode::ESCAPE, KeyCode::DOT,ModifierFlag::SHIFT_L</autogen>
-        </item>
-        <item>
-            <name>Move caret prev word</name>
-            <identifier>private.orz.fuscus.web_storm.change_alt_b_to_move_caret_prev_word</identifier>
-            <only>WEB_STORM</only>
-            <autogen>--KeyToKey-- KeyCode::B,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::B</autogen>
-        </item>
     </item>
 </root>
