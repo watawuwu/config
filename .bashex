@@ -102,7 +102,9 @@ export PATH=$PATH:$GRADLE_HOME/bin
 export AWS_SNS_HOME=${HOME}"/opt/SimpleNotificationServiceCli"
 export PATH=$PATH:$AWS_SNS_HOME/bin
 
-
+# nodebrew
+export NODEBREW_ROOT=$HOME/.nodebrew
+export PATH=$PATH:${HOME}/.nodebrew/current/bin
 
 # Dstat
 export DSTAT_MYSQL_USER=root
