@@ -146,7 +146,17 @@
             <only>INTELIJ</only>
             <autogen>--KeyToKey-- KeyCode::G,ModifierFlag::CONTROL_L, KeyCode::ESCAPE</autogen>
         </item>
-
-
+        <item>
+            <name>Move down</name>
+            <identifier>private.orz.fuscus.change_ctl_n_to_down</identifier>
+            <only>INTELIJ</only>
+            <autogen>--KeyToKey-- KeyCode::N,ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN</autogen>
+        </item>
+        <item>
+            <name>Move up</name>
+            <identifier>private.orz.fuscus.change_ctl_p_to_up</identifier>
+            <only>INTELIJ</only>
+            <autogen>--KeyToKey-- KeyCode::P,ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP</autogen>
+        </item>
     </item>
 </root>
