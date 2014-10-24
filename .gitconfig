@@ -2,7 +2,7 @@
     path = .gitconfig.user
 
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
     autocrlf = input
     pager = lv -c
     whitespace = trailing-space,space-before-tab,-indent-with-non-tab,-cr-at-eol
@@ -12,7 +12,6 @@
 
 [merge]
     keepBackup = false
-    tool = p4merge
 
 [mergetool "p4merge"]
     cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
@@ -21,12 +20,21 @@
     keepBackup = false
 
 [diff]
-    external = p4diff
-    tool = p4merge
+	external = p4diff
+	tool = p4diff
 
-[difftool "p4merge"]
-    cmd = p4merge "$LOCAL" "$REMOTE"
-    prompt = false
+[difftool "p4diff"]
+	cmd = p4diff "$LOCAL" "$REMOTE"
+	prompt = false
+
+
+#[diff]
+#    external = p4diff
+#    tool = p4merge
+#
+#[difftool "p4merge"]
+#    cmd = p4merge "$LOCAL" "$REMOTE"
+#    prompt = false
 
 [push]
     default = tracking
