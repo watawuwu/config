@@ -27,8 +27,8 @@ alias cdiff="colordiff --side-by-side"
 # alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
 # alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
 
-alias urlencode='php -r "echo(urlencode(fgets(STDIN)) . PHP_EOL);"'
-alias urldecode='php -r "echo(urldecode(fgets(STDIN)) . PHP_EOL);"'
+alias urlencode='php -r "echo(urlencode(file_get_contents(\"php://stdin\")) . PHP_EOL);"'
+alias urldecode='php -r "echo(urldecode(file_get_contents(\"php://stdin\")) . PHP_EOL);"'
 
 alias unixtime="date +%s"
 alias to_unixtime="date +%s --date"
