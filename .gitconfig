@@ -20,13 +20,12 @@
     keepBackup = false
 
 [diff]
-	external = p4diff
-	tool = p4diff
+    external = p4diff
+    tool = p4diff
 
 [difftool "p4diff"]
-	cmd = p4diff "$LOCAL" "$REMOTE"
-	prompt = false
-
+    cmd = p4diff "$LOCAL" "$REMOTE"
+    prompt = false
 
 #[diff]
 #    external = p4diff
@@ -53,6 +52,7 @@
     cal = commit -a
     cam = commit -a --amend
     co = checkout
+	coh = checkout HEAD
 
     # branch
     br = branch
