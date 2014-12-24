@@ -154,7 +154,8 @@
         'ruby-block
         'web-mode
         'foreign-regexp
-        'nginx-mode)
+        'nginx-mode
+        'markdown-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
