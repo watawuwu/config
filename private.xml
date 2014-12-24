@@ -35,16 +35,6 @@
         <identifier>private.orz.fuscus.change_jis_kana_to_escape</identifier>
         <autogen>--KeyToKey-- KeyCode::JIS_KANA, KeyCode::ESCAPE</autogen>
     </item>
-    <!-- 結局 PCKeybordHackを使った-->
-    <!-- <item> -->
-    <!--   <name>For Topre</name> -->
-    <!--   <item> -->
-    <!--     <name>Change muhenkan to command</name> -->
-    <!--     <identifier>private.orz.topre.change_nuhenkan_to_command</identifier> -->
-    <!--     <device_only>DeviceVendor::TOPRE, DeviceProduct::REAL_FORCE</device_only> -->
-    <!--     <autogen>--KeyToKey-- ModifierFlag::COMMAND_L| ModifierFlag::NONE, ModifierFlag::COMMAND_L</autogen> -->
-    <!--   </item> -->
-    <!-- </item> -->
     <item>
         <name>For Google Chrome</name>
         <item>
@@ -85,18 +75,9 @@
             <identifier>private.orz.fuscus.change_ctl_w_to_command_shift_left_command_x</identifier>
             <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::CONTROL_L,KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::X, ModifierFlag::COMMAND_L</autogen>
         </item>
-        <!-- <item> -->
-        <!--     <name>Option + left mark to Text Start</name> -->
-        <!--     <identifier>private.orz.fuscus.change_optin_shift_comma_to_text_head</identifier> -->
-        <!--     <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::SHIFT_L, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::X, ModifierFlag::COMMAND_L</autogen> -->
-        <!-- </item> -->
-        <!-- <item> -->
-        <!--     <name>Option + right mark to Text End</name> -->
-        <!--     <identifier>private.orz.fuscus.change_optin_shift_dot_to_text_end</identifier> -->
-        <!--     <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::CONTROL_L,KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::X, ModifierFlag::COMMAND_L</autogen> -->
-        <!-- </item> -->
     </item>
-    <item>
+
+     <item>
         <name>For Intellij IDEA</name>
         <item>
             <name>Kill ring save</name>
