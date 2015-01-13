@@ -30,12 +30,6 @@
     </replacementvalue>
   </replacementdef>
     <item>
-        <name>JIS_KANA</name>
-        <appendix>JIS_KANA to ESCAPE</appendix>
-        <identifier>private.orz.fuscus.change_jis_kana_to_escape</identifier>
-        <autogen>--KeyToKey-- KeyCode::JIS_KANA, KeyCode::ESCAPE</autogen>
-    </item>
-    <item>
         <name>For Google Chrome</name>
         <item>
             <name>Control B to History Back</name>
@@ -69,58 +63,10 @@
             <identifier>private.orz.fuscus.change_option_h_to_option_delete</identifier>
             <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::OPTION_L,KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
         </item>
-        <item>
-            <name>Control W to Command+Shift+Left+Command+X</name>
-            <appendix>これは正しくないね。</appendix>
-            <identifier>private.orz.fuscus.change_ctl_w_to_command_shift_left_command_x</identifier>
-            <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::CONTROL_L,KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::X, ModifierFlag::COMMAND_L</autogen>
-        </item>
     </item>
 
      <item>
         <name>For Intellij IDEA</name>
-        <item>
-            <name>Kill ring save</name>
-            <identifier>private.orz.fuscus.change_alt_w_to_kill_ring_save</identifier>
-            <only>INTELIJ</only>
-            <autogen>--KeyToKey-- KeyCode::W,ModifierFlag::OPTION_L, KeyCode::C, ModifierFlag::OPTION_L</autogen>
-        </item>
-        <item>
-            <name>Kill word</name>
-            <identifier>private.orz.fuscus.change_alt_d_to_kill_word</identifier>
-            <only>INTELIJ</only>
-            <autogen>--KeyToKey-- KeyCode::D,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::D</autogen>
-        </item>
-        <item>
-            <name>Scroll down command</name>
-            <identifier>private.orz.fuscus.change_alt_v_to_scroll_down_command</identifier>
-            <only>INTELIJ</only>
-            <autogen>--KeyToKey-- KeyCode::V,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::V</autogen>
-        </item>
-        <item>
-            <name>Declaration</name>
-            <identifier>private.orz.fuscus.change_alt_dot_to_declaration</identifier>
-            <only>INTELIJ</only>
-            <autogen>--KeyToKey-- KeyCode::DOT,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::DOT</autogen>
-        </item>
-        <item>
-            <name>Comment Out</name>
-            <identifier>private.orz.fuscus.change_alt_semicolon_to_commentout</identifier>
-            <only>INTELIJ</only>
-            <autogen>--KeyToKey-- KeyCode::SEMICOLON,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::SEMICOLON</autogen>
-        </item>
-        <item>
-            <name>Move caret text end</name>
-            <identifier>private.orz.fuscus.change_alt_shift_dot_to_move_caret_text_end</identifier>
-            <only>INTELIJ</only>
-            <autogen>--KeyToKey-- KeyCode::DOT,ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L, KeyCode::ESCAPE, KeyCode::DOT,ModifierFlag::SHIFT_L</autogen>
-        </item>
-        <item>
-            <name>Move caret prev word</name>
-            <identifier>private.orz.fuscus.change_alt_b_to_move_caret_prev_word</identifier>
-            <only>INTELIJ</only>
-            <autogen>--KeyToKey-- KeyCode::B,ModifierFlag::OPTION_L, KeyCode::ESCAPE, KeyCode::B</autogen>
-        </item>
         <item>
             <name>Escape</name>
             <identifier>private.orz.fuscus.change_ctl_g_to_escape</identifier>
