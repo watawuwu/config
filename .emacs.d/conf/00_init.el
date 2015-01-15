@@ -116,7 +116,7 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (setq ring-bell-function 'ignore)
 
 ;; マウスで選択するとコピーする Emacs 24 ではデフォルトが nil
-(setq mouse-drag-copy-region nil)
+(setq mouse-drag-copy-region t)
 
 ;; 履歴
 (progn
