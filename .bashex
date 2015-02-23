@@ -112,6 +112,12 @@ export DSTAT_MYSQL_PWD=password
 export DSTAT_MYSQL_HOST='127.0.0.1'
 export DSTAT_MYSQL='-uroot -ppass -h127.0.0.1'
 
+# Nim
+export NIM_HOME=${HOME}"/repo/Nim"
+export NIMBLE_HOME=${HOME}"/.nimble"
+export PATH=$PATH:$NIM_HOME/bin:$NIMBLE_HOME/bin
+
+
 # work…
 export DEV_ENV='tokyo'
 
