@@ -158,7 +158,8 @@
         'web-mode
         'foreign-regexp
         'nginx-mode
-        'markdown-mode)
+        'pandoc-mode
+        'nim-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings

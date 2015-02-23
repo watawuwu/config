@@ -480,6 +480,15 @@ redrawが non-nilの場合は、Windowを再描画します。"
 ;; Nginx-mode
 (when (require 'nginx-mode nil t))
 
+;; markdownモード
+(when (require 'markdown-mode nil t)
+  (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+  (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode)))
+
+;; nimモード
+(when (require 'nim-mode nil t)
+  (add-to-list 'auto-mode-alist '("\\.nim$" . nim-mode)))
+
 ;; サーバ起動
 (when (server-start)
   (defun iconify-emacs-when-server-is-done ()
