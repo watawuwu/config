@@ -159,7 +159,8 @@
         'foreign-regexp
         'nginx-mode
         'pandoc-mode
-        'nim-mode)
+        'nim-mode
+        'rust-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
