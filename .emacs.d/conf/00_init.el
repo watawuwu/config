@@ -489,6 +489,11 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (when (require 'nim-mode nil t)
   (add-to-list 'auto-mode-alist '("\\.nim$" . nim-mode)))
 
+;; rustモード
+(when (require 'rust-mode nil t)
+  (add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode)))
+
+
 ;; サーバ起動
 (when (server-start)
   (defun iconify-emacs-when-server-is-done ()
