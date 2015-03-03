@@ -160,7 +160,8 @@
         'nginx-mode
         'pandoc-mode
         'nim-mode
-        'rust-mode)
+        'rust-mode
+        'dockerfile-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
