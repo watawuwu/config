@@ -35,6 +35,9 @@ alias to_unixtime="date +%s --date"
 
 alias sqllint="php ${HOME}/repo/sql-formatter/examples/cli.php"
 
+alias dc-all-rm="docker ps -qf 'status=exited' | xargs -n 1 docker rm"
+alias dc-last-id="docker ps -qal"
+
 
 if [ `uname` = "Darwin" ]; then
     # for osx
