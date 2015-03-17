@@ -147,6 +147,11 @@ if [ -f ${HOME}/.git-prompt.sh ]; then
 fi
 
 
+# bash complsete
+#============================================================================================
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  source $(brew --prefix)/etc/bash_completion
+fi
 
 # functions
 #============================================================================================
