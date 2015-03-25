@@ -161,7 +161,8 @@
         'pandoc-mode
         'nim-mode
         'rust-mode
-        'dockerfile-mode)
+        'dockerfile-mode
+        'coffee-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
