@@ -6,6 +6,9 @@
 ;; 見出しのキーバインド設定
 (when (require 'org nil t)
 
+  ;; confluence
+  (require 'ox-confluence)
+
   (defun org-insert-example-block ()
     (interactive)
     (org-indent-line)
