@@ -9,3 +9,4 @@ url/
 el-get/emacs-w3m/config.status
 *.elc
 orgcard.txt
+elpa

@@ -104,7 +104,6 @@
         'html-helper-mode
         'ibus
         'init-loader
-        'jira
         'js2-mode
         'judge-indent
         'lispxmp
@@ -162,7 +161,8 @@
         'nim-mode
         'rust-mode
         'dockerfile-mode
-        'coffee-mode)
+        'coffee-mode
+        'haskell-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
