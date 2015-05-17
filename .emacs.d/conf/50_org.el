@@ -112,4 +112,10 @@
             `(("New file" ?n "* %(identity prefix)%?\n   \n   %a\n   %t"
                ,(concat org-new-file-name ".el")  nil))))
       (org-capture)))
-  )
+
+  (setq org-html-indent nil)
+
+  ;; org-reveal
+  (when (require 'ox-reveal nil t)
+    (setq org-reveal-root "http://cdn.jsdelivr.net/reveal.js/3.0.0/"))
+)
