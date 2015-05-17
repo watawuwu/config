@@ -5,27 +5,6 @@
   (when (require 'helm-ls-git nil t))
   (when (require 'helm-descbinds nil t))
 
-;;  ;; Enable helm-gtags-mode
-;;  (when (require 'helm-gtags nil t)
-;;
-;;    ;; customize
-;;    (setq helm-gtags-path-style 'relative)
-;;    (setq helm-gtags-ignore-case t)
-;;    (setq helm-gtags-read-only t)
-;;    (setq helm-gtags-auto-update t)
-
-;;    ;; key bindings
-;;    (add-hook 'helm-gtags-mode-hook
-;;              '(lambda ()
-;;                 (local-set-key (kbd "M-.") 'helm-gtags-find-tag)
-;;                 (local-set-key (kbd "M-r") 'helm-gtags-find-rtag)
-;;                 (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
-;;                 (local-set-key (kbd "M-g M-p") 'helm-gtags-parse-file)
-;;                 (local-set-key (kbd "M-,") 'helm-gtags-pop-stack)))
-;;
-;;    ;; Enable helm-gtags-mode
-;;    (add-hook 'php-mode-hook 'helm-gtags-mode))
-
   (when (require 'helm-ag nil t)
     (setq helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
     (setq helm-ag-command-option "--all-text")
@@ -55,7 +34,7 @@
        helm-c-source-recentf
        helm-c-source-file-cache
        helm-c-source-files-in-current-dir
-;;       helm-source-ctags
+       ;;       helm-source-ctags
        ;;       helm-c-source-git-project-for
        helm-c-source-findutils)
      "*helm file list*"))
@@ -67,6 +46,7 @@
   (global-set-key (kbd "C-;") 'helm-ls-git-ls)
   (global-set-key (kbd "M-y") 'helm-show-kill-ring)
   (global-set-key (kbd "C-x C-r") 'helm-recentf)
+  (global-set-key (kbd "C-x b") 'helm-buffers-list)
   (global-set-key (kbd "C-M-z") 'helm-resume)
   (global-set-key (kbd "M-?") 'helm-descbinds)
   (global-set-key (kbd "M-x") 'helm-M-x)
@@ -77,6 +57,24 @@
   (eval-after-load "helm"
     '(define-key helm-map (kbd "C-h") 'delete-backward-char))
 
+
+  ;; orig. http://d.hatena.ne.jp/sugyan/20120111/1326288445
+  (defun my-yas/prompt (prompt choices &optional display-fn)
+    (let* ((names (loop for choice in choices
+                        collect (or (and display-fn (funcall display-fn choice))
+                                    choice)))
+           (selected (helm-other-buffer
+                      `(((name . ,(format "%s" prompt))
+                         (candidates . names)
+                         (action . (("Insert snippet" . (lambda (arg) arg))))))
+                      "*helm yas/prompt*")))
+      (if selected
+          (let ((n (position selected names :test 'equal)))
+            (nth n choices))
+        (signal 'quit "user quit!"))))
+  (custom-set-variables '(yas/prompt-functions '(my-yas/prompt)))
+
+
   (custom-set-faces
    '(helm-candidate-number ((t (:background "wheat4" :foreground "black"))))
    '(helm-selection ((t (:background "gray10" :foreground "gray75" :underline nil))))
@@ -84,5 +82,8 @@
    '(helm-visible-mark ((t (:background "gray10" :foreground "gray86"))))
    '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
    '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+
+
+  
 
   )
