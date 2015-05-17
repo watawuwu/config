@@ -2,18 +2,19 @@
 # name: simplenote
 # key: simplenote
 # --
+# -*- mode: org -*-
 #+TITLE: ${1:title}
 #+AUTHOR: watawu.m
-#+LANGUAGE: ja
-#+OPTIONS: H:3 num:t toc:2 ^:nil author:t creator:t timestamp:t preamble:
-#+INFOJS_OPT: view:t mouse:underline buttons:0 path:http://thomasf.github.io/solarized-css/org-info.min.js
+#+LANGUAGE: en
+#+OPTIONS: H:3 num:nil toc:1 ^:nil author:t creator:t timestamp:t preamble: \n:t
+#+REVEAL_MAX_SCALE: 1.4
+#+REVEAL_MIN_SCALE: 1.0
+#+REVEAL_MARGIN: 0
+#+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:t
+#+OPTIONS: reveal_mathjax:t reveal_rolling_links:t reveal_keyboard:t reveal_overview:t
+#+INFOJS_OPT: view:nil mouse:underline buttons:0 path:http://thomasf.github.io/solarized-css/org-info.min.js
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-light.min.css" />
 
 * ${2:summary}
-
-* Emacs Variables                                                  :noexport:
-Local Variables:
-mode: org
-coding: utf-8
-end:
 $0
