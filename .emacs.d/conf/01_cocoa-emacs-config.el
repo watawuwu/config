@@ -73,3 +73,10 @@
  (when (require 'ls-lisp)
    (setq ls-lisp-use-insert-directory-program nil))
 
+;; iTerm 連携
+(defun show-in-iterm-for-mac()
+  (interactive)
+  (shell-command (concat "open -a iTerm " default-directory))
+  )
+
+(global-set-key (kbd "s-T") 'show-in-iterm-for-mac)
