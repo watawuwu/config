@@ -49,6 +49,7 @@
     rbm = rebase master
     ad = add
     ci = commit
+	cm = commit --amend
     cal = commit -a
     cam = commit -a --amend
     co = checkout
