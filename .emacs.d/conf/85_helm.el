@@ -6,10 +6,10 @@
   (when (require 'helm-descbinds nil t))
 
   (when (require 'helm-ag nil t)
-    (setq helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
-    (setq helm-ag-command-option "--all-text")
-    (setq helm-ag-thing-at-point 'symbol)
-    (setq helm-ag-source-type 'file-line)
+    (custom-set-variables
+     '(helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
+     '(helm-ag-command-option "--all-text")
+     '(helm-ag-insert-at-point 'symbol))
     (global-set-key (kbd "C-c C-s") 'helm-ag))
 
   ;; 既存コマンドの置き換え
