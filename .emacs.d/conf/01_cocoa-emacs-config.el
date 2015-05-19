@@ -7,6 +7,10 @@
 
 (setq default-input-method "MacOSX")
 
+(mac-auto-ascii-mode 1)
+(setq mac-command-modifier 'super)
+(setq mac-option-modifier 'meta)
+
 ;; RGB用設定
 (setq ns-use-srgb-colorspace t)
 
@@ -80,3 +84,4 @@
   )
 
 (global-set-key (kbd "s-T") 'show-in-iterm-for-mac)
+
