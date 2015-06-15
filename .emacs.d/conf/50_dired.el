@@ -92,6 +92,4 @@ Creates a buffer if necessary."
   (write-region "" nil file-name nil nil nil)
   (revert-buffer nil)
   (find-file file-name))
-(define-key dired-mode-map "\C-i" 'my/dired-create-file)
-
-
+(define-key dired-mode-map (kbd "C-c C-i") 'my/dired-create-file)
