@@ -162,7 +162,8 @@
         'rust-mode
         'dockerfile-mode
         'coffee-mode
-        'haskell-mode)
+        'haskell-mode
+        'toml-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
