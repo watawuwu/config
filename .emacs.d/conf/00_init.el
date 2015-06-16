@@ -498,6 +498,11 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (when (require 'coffee-mode nil t)
   (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode)))
 
+;; tomlモード
+(when (require 'toml-mode nil t)
+  (add-to-list 'auto-mode-alist '("\\.toml$" . toml-mode)))
+
+
 (defun gker-setup-sh-mode ()
   "My own personal preferences for `sh-mode'.
 
