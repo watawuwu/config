@@ -158,6 +158,7 @@
         'foreign-regexp
         'nginx-mode
         'pandoc-mode
+        'epc
         'nim-mode
         'rust-mode
         'dockerfile-mode
