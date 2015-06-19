@@ -13,3 +13,8 @@
   (interactive "r")
   (align-regexp begin end
                 (rx (group (zero-or-more (syntax whitespace))) "=") 1 1 ))
+
+(defun autoload-if-found (function file &optional docstring interactive type)
+  "set autoload iff. FILE has found."
+  (and (locate-library file)
+       (autoload function file docstring interactive type)))
