@@ -4,10 +4,10 @@
 
 
 ;; 見出しのキーバインド設定
-(when (require 'org nil t)
+(when (autoload-if-found 'org "org")
 
   ;; confluence
-  (require 'ox-confluence)
+  (autoload-if-found 'ox-confluence "ox-confluence")
 
   (defun org-insert-example-block ()
     (interactive)
@@ -116,6 +116,6 @@
   (setq org-html-indent nil)
 
   ;; org-reveal
-  (when (require 'ox-reveal nil t)
+  (when (autoload-if-found 'ox-reveal "ox-reveal")
     (setq org-reveal-root "http://cdn.jsdelivr.net/reveal.js/3.0.0/"))
 )

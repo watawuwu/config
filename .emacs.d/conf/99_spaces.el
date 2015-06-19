@@ -1,4 +1,4 @@
-(when (require 'whitespace)
+(when (autoload-if-found 'whitespace "whitespace")
   (setq whitespace-style '(face           ; faceで可視化
                            trailing       ; 行末
                            tabs           ; タブ
