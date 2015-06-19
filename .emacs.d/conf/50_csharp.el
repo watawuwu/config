@@ -1,4 +1,4 @@
-(when (require 'csharp-mode nil t)
+(when (autoload-if-found 'csharp-mode "csharp-mode")
 
   ;; Cモード共通フック
   (add-hook 'csharp-mode-hook

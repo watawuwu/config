@@ -1,5 +1,5 @@
 ;; Haskell-mode
-(when (require 'haskell-mode nil t)
+(when (autoload-if-found 'haskell-mode "haskell-mode")
   ;; indent の有効.
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
   (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
@@ -14,6 +14,5 @@
     (other-window 1))
   (ad-activate 'inferior-haskell-load-file)
 
-  (add-hook 'haskell-mode-hook (lambda () (flymake-mode)))
-  )
+  (add-hook 'haskell-mode-hook (lambda () (flymake-mode))))
 

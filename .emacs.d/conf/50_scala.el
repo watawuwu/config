@@ -1,10 +1,9 @@
 ;; scala-mode
 
-(when (require 'scala-mode2 nil t)
+(when (autoload-if-found 'scala-mode2 "scala-mode2")
 
-
-  ;;  (require 'scala-mode-feature-electric nil t)
-  (require 'ensime nil t)
+  ;;  (autoload-if-found 'scala-mode-feature-electric "scala-mode-feature-electric")
+  (autoload-if-found 'ensime "ensime")
 
   (defun my-scala-switch-to-interpreter ()
     (interactive)
@@ -53,5 +52,4 @@
               ;;              (flex-autopair-mode t)
               ))
 
-  (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-  )
+  (add-hook 'scala-mode-hook 'ensime-scala-mode-hook))

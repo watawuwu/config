@@ -254,11 +254,12 @@ redrawが non-nilの場合は、Windowを再描画します。"
 ;;;; ==========================================================================================================
 
 ;; 自動コンパイル設定
-(when (require 'auto-async-byte-compile)
-  (setq auto-async-byte-compile-exclude-files-regexp "/junk/")
-  ;; とりあえず
-  ;;(setq auto-async-byte-compile-display-function nil)
-  (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode))
+;; 結局使ってない
+;; (when (require 'auto-async-byte-compile)
+;;   (setq auto-async-byte-compile-exclude-files-regexp "/junk/")
+;;   ;; とりあえず
+;;   ;;(setq auto-async-byte-compile-display-function nil)
+;;   (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode))
 
 ;; 同じファイルを開いている場合にディレクトリ名を追加
 (when (require 'uniquify nil t)
@@ -462,44 +463,44 @@ redrawが non-nilの場合は、Windowを再描画します。"
              (define-key sh-mode-map (kbd "C-c C-l") 'toggle-truncate-lines)))
 
 
-;; yamlモード
-(when (require 'yaml-mode nil t)
-  (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode)))
-
 ;; undo-treeモードの設定
 (when (require 'undo-tree nil t)
   (global-undo-tree-mode))
-
-;; apples-mode
-(when (require 'apples-mode nil t)
-  (add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode)))
 
 ;; ブロックの折畳みと展開
 (when (require 'fold-dwim nil t)
   (require 'fold-dwim-org nil t))
 
+;; yamlモード
+(when (autoload-if-found 'yaml-mode "yaml-mode")
+  (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode)))
+
+;; apples-mode
+(when (autoload-if-found 'apples-mode "apples-mode")
+  (add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode)))
+
 ;; Nginx-mode
-(when (require 'nginx-mode nil t))
+(when (autoload-if-found 'nginx-mode "nginx-mode"))
 
 ;; markdownモード
-(when (require 'markdown-mode nil t)
+(when (autoload-if-found 'markdown-mode "markdown-mode")
   (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
   (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode)))
 
 ;; nimモード
-(when (require 'nim-mode nil t)
+(when (autoload-if-found 'nim-mode "nim-mode")
   (add-to-list 'auto-mode-alist '("\\.nim$" . nim-mode)))
 
 ;; rustモード
-(when (require 'rust-mode nil t)
+(when (autoload-if-found 'rust-mode "rust-mode")
   (add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode)))
 
 ;; coffeeモード
-(when (require 'coffee-mode nil t)
+(when (autoload-if-found 'coffee-mode "coffee-mode")
   (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode)))
 
 ;; tomlモード
-(when (require 'toml-mode nil t)
+(when (autoload-if-found 'toml-mode "toml-mode")
   (add-to-list 'auto-mode-alist '("\\.toml$" . toml-mode)))
 
 ;; dash
