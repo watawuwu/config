@@ -502,6 +502,10 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (when (require 'toml-mode nil t)
   (add-to-list 'auto-mode-alist '("\\.toml$" . toml-mode)))
 
+;; dash
+(when (autoload-if-found 'dash-at-point "dash-at-point")
+  (global-set-key (kbd "C-c d") 'dash-at-point)
+  (global-set-key (kbd "C-c e") 'dash-at-point-with-docset))
 
 (defun gker-setup-sh-mode ()
   "My own personal preferences for `sh-mode'.

@@ -163,7 +163,8 @@
         'dockerfile-mode
         'coffee-mode
         'haskell-mode
-        'toml-mode)
+        'toml-mode
+        'dash-at-point)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
