@@ -66,6 +66,13 @@ then
   eval "$(phpenv init -)"
 fi
 
+# java
+if [[ -n `which jenv` ]]
+then
+  eval "$(jenv init -)"
+fi
+
+
 # android
 
 export ANDROID_HOME=${HOME}/opt/adt-bundle/sdk
