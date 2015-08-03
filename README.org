@@ -5,7 +5,7 @@
 
 * watawuwu config
 - dotfiles and devloment tools setting files
-[[[[./asset/watawuwu-logo.png]]]]
+[[./asset/watawuwu-logo.png]]
 
 
 
