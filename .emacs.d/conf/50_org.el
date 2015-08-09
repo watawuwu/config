@@ -7,7 +7,9 @@
 (when (autoload-if-found 'org "org")
 
   ;; confluence
-  (autoload-if-found 'ox-confluence "ox-confluence")
+  (when (require 'ox-confluence nil t))
+  ;; markdown
+  (when (require 'ox-md nil t))
 
   (defun org-insert-example-block ()
     (interactive)
@@ -116,6 +118,5 @@
   (setq org-html-indent nil)
 
   ;; org-reveal
-  (when (autoload-if-found 'ox-reveal "ox-reveal")
-    (setq org-reveal-root "http://cdn.jsdelivr.net/reveal.js/3.0.0/"))
-)
+  (when (require 'ox-reveal nil t)
+    (setq org-reveal-root "http://cdn.jsdelivr.net/reveal.js/3.0.0/")))

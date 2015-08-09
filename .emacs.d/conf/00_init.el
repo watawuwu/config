@@ -480,7 +480,7 @@ redrawが non-nilの場合は、Windowを再描画します。"
   (add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode)))
 
 ;; Nginx-mode
-(when (autoload-if-found 'nginx-mode "nginx-mode"))
+(when (require 'nginx-mode nil t))
 
 ;; markdownモード
 (when (autoload-if-found 'markdown-mode "markdown-mode")
@@ -504,7 +504,7 @@ redrawが non-nilの場合は、Windowを再描画します。"
   (add-to-list 'auto-mode-alist '("\\.toml$" . toml-mode)))
 
 ;; dash
-(when (autoload-if-found 'dash-at-point "dash-at-point")
+(when (require 'dash-at-point nil t)
   (global-set-key (kbd "C-c d") 'dash-at-point)
   (global-set-key (kbd "C-c e") 'dash-at-point-with-docset))
 

@@ -4,7 +4,7 @@
 # --
 # -*- mode: org -*-
 #+TITLE: ${1:title}
-#+AUTHOR: watawu.m
+#+AUTHOR: watawuwu
 #+LANGUAGE: en
 #+OPTIONS: H:3 num:nil toc:1 ^:nil author:t creator:t timestamp:t preamble: \n:t
 #+REVEAL_MAX_SCALE: 1.4

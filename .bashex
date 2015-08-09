@@ -123,8 +123,13 @@ export NIMBLE_HOME=${HOME}"/.nimble"
 export PATH=$PATH:$NIM_HOME/bin:$NIMBLE_HOME/bin
 
 
-# work…
-export DEV_ENV='tokyo'
+# Brewfile
+export HOMEBREW_BREWFILE=${HOME}/Dropbox/config/brew-file/Brewfile
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi
+
 
 if [ `uname` = "Darwin" ]; then
   # for osx
@@ -218,3 +223,4 @@ if [ -n `which peco` ] && [[ $SHELL = *bash ]]
 then
   bind -x '"\C-r": peco-history'
 fi
+
