@@ -1,0 +1,12 @@
+# -*- mode: org -*-
+#+TITLE: config
+#+AUTHOR: watawuwu
+#+LANGUAGE: en
+
+* watawuwu config
+- dotfiles and devloment tools setting files
+[[./asset/watawuwu-logo.png]]
+
+
+
+
