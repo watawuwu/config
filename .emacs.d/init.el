@@ -155,7 +155,6 @@
         'ruby-electric
         'ruby-block
         'web-mode
-        'foreign-regexp
         'nginx-mode
         'pandoc-mode
         'epc
@@ -165,7 +164,9 @@
         'coffee-mode
         'haskell-mode
         'toml-mode
-        'dash-at-point)
+        'dash-at-point
+        'visual-regexp
+        'visual-regexp-steroids)
 
 ;;;; ==========================================================================================================
 ;;;; other settings

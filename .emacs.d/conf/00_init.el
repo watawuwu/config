@@ -508,6 +508,15 @@ redrawが non-nilの場合は、Windowを再描画します。"
   (global-set-key (kbd "C-c d") 'dash-at-point)
   (global-set-key (kbd "C-c e") 'dash-at-point-with-docset))
 
+(when (require 'visual-regexp-steroids nil t)
+  (define-key global-map (kbd "C-c r") 'vr/replace)
+  (define-key global-map (kbd "C-c q") 'vr/query-replace)
+  ;; to use visual-regexp-steroids's isearch instead of the built-in regexp isearch, also include the following lines:
+  (define-key esc-map (kbd "C-r") 'vr/isearch-backward) ;; C-M-r
+  (define-key esc-map (kbd "C-s") 'vr/isearch-forward)  ;; C-M-s
+  )
+
+
 (defun gker-setup-sh-mode ()
   "My own personal preferences for `sh-mode'.
 
@@ -523,10 +532,3 @@ prefer for `sh-mode'.  It is automatically added to
 (when (server-start)
   (defun iconify-emacs-when-server-is-done ()
     (unless 'server-clients (iconify-frame))))
-
-
-(when (require 'foreign-regexp nil t)
-  (custom-set-variables
-   '(foreign-regexp/regexp-type 'perl) ;; Choose by your preference.
-   '(reb-re-syntax 'foreign-regexp)) ;; Tell re-builder to use foreign regexp.
-  )
