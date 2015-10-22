@@ -425,9 +425,6 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (when (require 'fold-dwim nil t)
   (require 'fold-dwim-org nil t))
 
-(when (require 'sticky nil t)
-  (use-sticky-key ";" 'sticky-alist:ja))
-
 ;; ファイルを開いたときにインデントにタブを使うか設定を自動的に変更してくれる
 ;;(require 'indent-tabs-maybe nil t)
 
