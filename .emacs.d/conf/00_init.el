@@ -500,6 +500,11 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (when (autoload-if-found 'toml-mode "toml-mode")
   (add-to-list 'auto-mode-alist '("\\.toml$" . toml-mode)))
 
+;; plantumlモード
+(when (autoload-if-found 'plantuml-mode "plantuml-mode")
+  (add-to-list 'auto-mode-alist '("\\.puml$" . plantuml-mode)))
+
+
 ;; dash
 (when (require 'dash-at-point nil t)
   (global-set-key (kbd "C-c d") 'dash-at-point)

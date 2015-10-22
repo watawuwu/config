@@ -166,7 +166,8 @@
         'toml-mode
         'dash-at-point
         'visual-regexp
-        'visual-regexp-steroids)
+        'visual-regexp-steroids
+        'plantuml-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
