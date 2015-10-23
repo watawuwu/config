@@ -4432,25 +4432,25 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>370 983 445 136 0 0 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>188 802 924 485 0 0 2560 1417 </string>
+	<string>324 490 924 485 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>1090 966 384 129 0 0 2560 1417 </string>
+	<string>525 985 384 129 0 0 2560 1417 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>477 325 1240 753 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1281 0 1273 1417 0 0 2560 1417 </string>
+	<string>2 7 2552 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2 7 2552 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
-	<string>6 7 2552 1402 0 0 2560 1417 </string>
+	<string>2 7 2552 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 11</key>
-	<string>6 7 2552 1402 0 0 2560 1417 </string>
+	<string>0 7 1278 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 12</key>
-	<string>6 714 2552 698 0 0 2560 1417 </string>
+	<string>1278 7 1278 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 13</key>
-	<string>4 7 1278 1402 0 0 2560 1417 </string>
+	<string>2 7 2552 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 14</key>
-	<string>1282 7 1278 1402 0 0 2560 1417 </string>
+	<string>0 7 1278 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 15</key>
 	<string>4 7 1278 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 16</key>
@@ -4460,21 +4460,21 @@
 	<key>NSWindow Frame iTerm Window 18</key>
 	<string>6 0 2552 1418 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1 7 1276 682 0 0 2560 1417 </string>
+	<string>2 7 2552 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>1 7 1276 682 0 0 2560 1417 </string>
+	<string>2 714 2552 698 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>2 -8 2553 1417 0 0 2560 1417 </string>
+	<string>2 7 2552 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>2 7 2552 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>2 5 2552 698 0 0 2560 1417 </string>
+	<string>1278 7 1278 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
-	<string>2 7 2552 1402 0 0 2560 1417 </string>
+	<string>1278 7 1278 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 8</key>
-	<string>2 7 2552 1402 0 0 2560 1417 </string>
+	<string>0 7 1278 1402 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 9</key>
-	<string>6 7 2552 1402 0 0 2560 1417 </string>
+	<string>1278 7 1278 1402 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_75A47188-6150-46A5-B87A-557DDA427FAC</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_878519A0-E23C-4CB6-BD48-7BE318F08287</key>
@@ -11853,6 +11853,10 @@
 			<string>/Users/wataru.matsui</string>
 		</dict>
 	</array>
+	<key>NoSyncTimeOfLastPromo</key>
+	<real>453257618.20219803</real>
+	<key>NoSyncTimeOfLastPromoDownload</key>
+	<real>465619138.19533497</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -11919,7 +11923,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-03-16T15:10:11Z</date>
+	<date>2015-10-05T01:05:43Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Secure Input</key>
@@ -11947,7 +11951,7 @@
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1423545216</real>
+	<real>1430960768</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseBorder</key>
@@ -11959,7 +11963,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>.Helvetica Neue DeskInterface</string>
+	<string>.AppleSystemUIFont</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -11971,6 +11975,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.0.0.20141103</string>
+	<string>2.1.1</string>
 </dict>
 </plist>
