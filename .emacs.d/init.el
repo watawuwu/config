@@ -167,7 +167,10 @@
         'dash-at-point
         'visual-regexp
         'visual-regexp-steroids
-        'plantuml-mode)
+        'plantuml-mode
+        'espresso-mode
+        'erfi
+        'replace-colorthemes)
 
 ;;;; ==========================================================================================================
 ;;;; other settings

@@ -14,6 +14,8 @@
   (add-hook 'js2-mode-hook
             '(lambda ()
                (define-key js2-mode-map (kbd "C-m") 'newline-and-indent)
+               (setq js2-basic-offset 2
+                    indent-tabs-mode nil)
                ;; sequential-command-configを有効にするため削除
                (define-key js2-mode-map (kbd "C-a") nil)
                (define-key js2-mode-map (kbd "C-e") nil))))

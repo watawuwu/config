@@ -2,12 +2,22 @@
 ;;;; 表示設定
 ;;;; ==========================================================================================================
 
-(let ((theme 'manoj-dark))
-  (load-theme theme t)
-  (let ((bg (background-color-at-point)))
-    (custom-theme-set-faces theme
-                            ;; fringeは常に背景色
-                            `(fringe ((t (:background ,bg)))))))
+;; Please set your themes directory to 'custom-theme-load-path
+(add-to-list 'custom-theme-load-path
+             (file-name-as-directory "~/.emacs.d/el-get/replace-colorthemes"))
+
+;; (let ((theme 'manoj-dark))
+;;   (load-theme theme t)
+;;   (let ((bg (background-color-at-point)))
+;;     (custom-theme-set-faces theme
+;;                             ;; fringeは常に背景色
+;;                             `(fringe ((t (:background ,bg)))))))
+
+
+(load-theme 'billw t t)
+(enable-theme 'billw)
+
+
 
 (when window-system
   ;; スクリーン設定
@@ -168,6 +178,9 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (add-hook 'after-save-hook
           'executable-make-buffer-file-executable-if-script-p)
 
+;; elファイルの方が新しければelcよりも優先して読み込む
+(setq load-prefer-newer t)
+
 ;;;; ==========================================================================================================
 ;;;; キーバインド
 ;;;; ==========================================================================================================
@@ -252,14 +265,6 @@ redrawが non-nilの場合は、Windowを再描画します。"
 ;;;; ==========================================================================================================
 ;;;; Elisp設定
 ;;;; ==========================================================================================================
-
-;; 自動コンパイル設定
-;; 結局使ってない
-;; (when (require 'auto-async-byte-compile)
-;;   (setq auto-async-byte-compile-exclude-files-regexp "/junk/")
-;;   ;; とりあえず
-;;   ;;(setq auto-async-byte-compile-display-function nil)
-;;   (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode))
 
 ;; 同じファイルを開いている場合にディレクトリ名を追加
 (when (require 'uniquify nil t)

@@ -1,0 +1,4 @@
+(:name replace-colorthemes
+       :description "Replace color-theme with Emacs theme framework"
+       :type github
+       :pkgname "emacs-jp/replace-colorthemes")

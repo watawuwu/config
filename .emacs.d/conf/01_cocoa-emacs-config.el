@@ -7,6 +7,9 @@
 
 (setq default-input-method "MacOSX")
 
+;; ¥（円マーク） , 92が\（バックスラッシュ）を表す
+(define-key global-map [165] [92])
+
 (mac-auto-ascii-mode 1)
 (setq mac-command-modifier 'super)
 (setq mac-option-modifier 'meta)
@@ -54,8 +57,8 @@
 
 ;; Mac OS X で ファイルシステムのフォーマットに HFS+ を利用している場合、ファイル名の取り扱いが、 Windows や Linux と異なります。
 (when (require 'ucs-normalize)
-     (setq file-name-coding-system 'utf-8-hfs)
-     (setq locale-coding-system 'utf-8-hfs))
+  (setq file-name-coding-system 'utf-8-hfs)
+  (setq locale-coding-system 'utf-8-hfs))
 
 ;; (require 'migemo)
 (setq migemo-command "/usr/local/bin/cmigemo")
@@ -74,14 +77,6 @@
 (setq browse-url-generic-program "open")
 
 ;; for ls --dired
- (when (require 'ls-lisp)
-   (setq ls-lisp-use-insert-directory-program nil))
-
-;; iTerm 連携
-(defun show-in-iterm-for-mac()
-  (interactive)
-  (shell-command (concat "open -a iTerm " default-directory))
-  )
-
-(global-set-key (kbd "s-T") 'show-in-iterm-for-mac)
+(when (require 'ls-lisp)
+  (setq ls-lisp-use-insert-directory-program nil))
 

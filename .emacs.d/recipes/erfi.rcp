@@ -1,0 +1,5 @@
+(:name erfi
+       :website "https://github.com/kenoss/erfi"
+       :description "Emacs Lisp Reconstruction for Indivisuals"
+       :type github
+       :pkgname "kenoss/erfi")

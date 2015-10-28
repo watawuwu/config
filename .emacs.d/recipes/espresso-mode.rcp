@@ -1,0 +1,4 @@
+(:name espresso-mode
+       :description "Major mode for editing JavaScript source text"
+       :type http
+       :url "http://download-mirror.savannah.gnu.org/releases/espresso/espresso.el")
