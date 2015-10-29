@@ -87,7 +87,7 @@ then
 
   # input
   bindkey '^xb' anyframe-widget-cdr
-  bindkey '^x^b' anyframe-widget-checkout-git-branch
+  bindkey '^x^b' anyframe-widget-cdr
 
   bindkey '^xr' anyframe-widget-execute-history
   bindkey '^x^r' anyframe-widget-execute-history
