@@ -123,7 +123,6 @@
         'point-undo
         'popup
         'popwin
-        'powerline
         'recentf-ext
         'redo+
         'scala-mode
@@ -170,7 +169,8 @@
         'plantuml-mode
         'espresso-mode
         'erfi
-        'replace-colorthemes)
+        'replace-colorthemes
+        'emacswiki-powerline)
 
 ;;;; ==========================================================================================================
 ;;;; other settings

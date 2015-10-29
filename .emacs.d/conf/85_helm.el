@@ -74,16 +74,9 @@
         (signal 'quit "user quit!"))))
   (custom-set-variables '(yas/prompt-functions '(my-yas/prompt)))
 
-
   (custom-set-faces
    '(helm-candidate-number ((t (:background "wheat4" :foreground "black"))))
    '(helm-selection ((t (:background "gray10" :foreground "gray75" :underline nil))))
    '(helm-source-header ((t (:background "RosyBrown3" :foreground "gray25" :box (:line-width 1 :color "grey75" :style pressed-button) :weight bold :height 1.0 :width expanded :family "Sans Serif"))))
-   '(helm-visible-mark ((t (:background "gray10" :foreground "gray86"))))
-   '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
-   '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
-
-
-  
-
+   '(helm-visible-mark ((t (:background "gray10" :foreground "gray86")))))
   )
