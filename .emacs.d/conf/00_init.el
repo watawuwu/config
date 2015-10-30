@@ -6,18 +6,8 @@
 (add-to-list 'custom-theme-load-path
              (file-name-as-directory "~/.emacs.d/el-get/replace-colorthemes"))
 
-;; (let ((theme 'manoj-dark))
-;;   (load-theme theme t)
-;;   (let ((bg (background-color-at-point)))
-;;     (custom-theme-set-faces theme
-;;                             ;; fringeは常に背景色
-;;                             `(fringe ((t (:background ,bg)))))))
-
-
 (load-theme 'billw t t)
 (enable-theme 'billw)
-
-
 
 (when window-system
   ;; スクリーン設定

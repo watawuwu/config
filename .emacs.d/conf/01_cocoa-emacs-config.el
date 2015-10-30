@@ -2,7 +2,6 @@
 ;;;; cocoa-emacsの設定
 ;;;; ==========================================================================================================
 
-
 (setq x-select-enable-clipboard t)
 
 (setq default-input-method "MacOSX")
