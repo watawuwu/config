@@ -483,10 +483,6 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (when (autoload-if-found 'nim-mode "nim-mode")
   (add-to-list 'auto-mode-alist '("\\.nim$" . nim-mode)))
 
-;; rustモード
-(when (autoload-if-found 'rust-mode "rust-mode")
-  (add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode)))
-
 ;; coffeeモード
 (when (autoload-if-found 'coffee-mode "coffee-mode")
   (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode)))
