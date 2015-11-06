@@ -53,6 +53,23 @@
 ;; add load-path directory
 (add-to-load-path "el-get")
 
+
+
+;;;; ==========================================================================================================
+;;;; package
+;;;; ==========================================================================================================
+(require 'package)
+
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+
+(package-refresh-contents)
+(package-initialize)
+
+
 ;;;; ==========================================================================================================
 ;;;; el-get
 ;;;; ==========================================================================================================
@@ -68,108 +85,120 @@
 ;; my recipes directory
 (add-to-list 'el-get-recipe-path (concat user-emacs-directory "recipes"))
 
-(el-get 'sync
-        'cl-lib
-        'apel
-        'apache-mode
-        'apples-mode
-        'auto-async-byte-compile
-        'auto-complete
-        'auto-highlight-symbol
-        'auto-save-buffers-enhanced
-        'c-eldoc
-        'color-moccur
-        'confluence
-        'ctags
-        'cycle-buffer
-        'css-mode
-        'emacs-w3m
-        'ensime
-        'expand-region
-        'flex-autopair
-        'flyphpcs
-        'fold-dwim-org
-        'fold-dwim
-        'fuzzy
-        'goto-chg
-        'helm
-        'helm-ag
-        'helm-descbinds
-        'gtags
-        'helm-gtags
-        'helm-migemo
-        'helm-ls-git
-        'helm-orgcard
-        'html-helper-mode
-        'ibus
-        'init-loader
-        'js2-mode
-        'judge-indent
-        'lispxmp
-        'magit
-        'moccur-edit
-        'open-junk-file
-        'org-html5presentation
-        'org-jira
-        'org-mode
-        'package
-        'paredit
-        'php-completion
-        'php-doc
-        'php-mode
-        'perl-completion
-        'pod-mode
-        'point-undo
-        'popup
-        'popwin
-        'recentf-ext
-        'redo+
-        'scala-mode
-        'scala-mode2
-        'sequential-command-config
-        'shell-history
-        'simplenote
-        'smooth-scroll
-        'smooth-scrolling
-        'sr-speedbar
-        'sticky
-        'sudo-ext
-        'summarye
-        'tree-mode
-        'undo-tree
-        'undohist
-        'wgrep
-        'xml-rpc
-        'yaml-mode
-        'yasnippet
-        'sequential-command
-        'migemo
-        'eldoc-extension
-        'pod-mode
-        'remember
-        'elscreen
-        'markdown-mode
-        'ruby-mode
-        'ruby-electric
-        'ruby-block
-        'web-mode
-        'nginx-mode
-        'pandoc-mode
-        'epc
-        'nim-mode
-        'rust-mode
-        'dockerfile-mode
-        'coffee-mode
-        'haskell-mode
-        'toml-mode
-        'dash-at-point
-        'visual-regexp
-        'visual-regexp-steroids
-        'plantuml-mode
-        'espresso-mode
-        'erfi
-        'replace-colorthemes
-        'emacswiki-powerline)
+(el-get-bundle cl-lib)
+
+(require 'cl-lib)
+
+(cl-defmacro el-get-sync (&optional &body packages)
+  (cl-loop for p in packages
+           do (eval `(el-get-bundle ,p))))
+
+(el-get-sync
+ apache-mode
+ apples-mode
+ auto-async-byte-compile
+ auto-complete
+ auto-highlight-symbol
+ auto-save-buffers-enhanced
+ c-eldoc
+ color-moccur
+ confluence
+ ctags
+ cycle-buffer
+ css-mode
+ emacs-w3m
+ ensime
+ expand-region
+ flex-autopair
+ flyphpcs
+ fold-dwim-org
+ fold-dwim
+ fuzzy
+ goto-chg
+ helm
+ helm-ag
+ helm-descbinds
+ gtags
+ helm-gtags
+ helm-migemo
+ helm-ls-git
+ helm-orgcard
+ html-helper-mode
+ ibus
+ init-loader
+ js2-mode
+ judge-indent
+ lispxmp
+ magit
+ moccur-edit
+ open-junk-file
+ org-html5presentation
+ org-jira
+ org-mode
+ package
+ paredit
+ php-completion
+ php-doc
+ php-mode
+ perl-completion
+ pod-mode
+ point-undo
+ popup
+ popwin
+ recentf-ext
+ redo+
+ scala-mode
+ scala-mode2
+ sequential-command-config
+ shell-history
+ simplenote
+ smooth-scroll
+ smooth-scrolling
+ sr-speedbar
+ sticky
+ sudo-ext
+ summarye
+ tree-mode
+ undo-tree
+ undohist
+ wgrep
+ xml-rpc
+ yaml-mode
+ yasnippet
+ sequential-command
+ migemo
+ eldoc-extension
+ pod-mode
+ remember
+ elscreen
+ markdown-mode
+ ruby-mode
+ ruby-electric
+ ruby-block
+ web-mode
+ nginx-mode
+ pandoc-mode
+ epc
+ nim-mode
+ rust-mode
+ dockerfile-mode
+ coffee-mode
+ haskell-mode
+ toml-mode
+ dash-at-point
+ visual-regexp
+ visual-regexp-steroids
+ plantuml-mode
+ espresso-mode
+ erfi
+ replace-colorthemes
+ emacswiki-powerline
+ elpa:company
+ elpa:company-racer
+ elpa:racer
+ elpa:flycheck
+ elpa:flycheck-rust
+ elpa:quickrun)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
