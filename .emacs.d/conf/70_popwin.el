@@ -8,6 +8,9 @@
   ;; helm
   (push '("helm" :regexp t)  popwin:special-display-config)
 
+  ;; quickrun
+  (push '("*quickrun*" :regexp t)  popwin:special-display-config)
+
   ;; org-mode
   (push '(" *Agenda Commands*")  popwin:special-display-config)
   (push '("*Org Agenda*")  popwin:special-display-config)
