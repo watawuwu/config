@@ -21,7 +21,7 @@
 (when window-system
   (let* (
          (fontset-name "myfonts")
-         (size 17)
+         (size 16)
          (asciifont "Essential PragmataPro for Powerline")
          (jpfont "Migu 2M")
          (font (format "%s-%d:weight=normal:slant=normal" asciifont size))
