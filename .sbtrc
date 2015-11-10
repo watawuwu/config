@@ -1,0 +1,7 @@
+alias c=compile
+alias ls=projects
+alias l=reload
+alias r=run
+alias u=update
+alias t=test
+alias cd=project
