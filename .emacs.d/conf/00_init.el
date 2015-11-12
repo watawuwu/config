@@ -509,6 +509,13 @@ redrawが non-nilの場合は、Windowを再描画します。"
   (define-key esc-map (kbd "C-s") 'vr/isearch-forward)  ;; C-M-s
   )
 
+;; Markdown
+(when (require 'livedown nil t)
+  (custom-set-variables
+   '(livedown:autostart nil) ; automatically open preview when opening markdown files 
+   '(livedown:open t)        ; automatically open the browser window
+   '(livedown:port 1337))    ; port for livedown server
+  )
 
 (defun gker-setup-sh-mode ()
   "My own personal preferences for `sh-mode'.

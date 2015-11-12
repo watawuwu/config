@@ -72,55 +72,13 @@ then
   eval "$(jenv init -)"
 fi
 
-
 # android
-
 export ANDROID_HOME=${HOME}/opt/adt-bundle/sdk
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${ANDROID_HOME}/tools
 
-
 # my opt
 export PATH=$PATH:$HOME/opt/bin
-
-# scala
-export SCALA_HOME="/opt/scala"
-export PATH=$PATH:$SCALA_HOME/bin
-
-# sbt
-export SBT_HOME="/opt/sbt"
-export PATH=$PATH:$SBT_HOME/bin
-
-# play
-export PLAY_HOME=${HOME}"/opt/play"
-export PATH=$PATH:$PLAY_HOME
-
-# pvtivator
-export ACTIVATOR_HOME=${HOME}"/opt/activator"
-export PATH=$PATH:$ACTIVATOR_HOME
-
-# gradle
-export GRADLE_HOME=${HOME}"/opt/gradle"
-export PATH=$PATH:$GRADLE_HOME/bin
-
-# sns-cli
-export AWS_SNS_HOME=${HOME}"/opt/SimpleNotificationServiceCli"
-export PATH=$PATH:$AWS_SNS_HOME/bin
-
-# nodebrew
-export NODEBREW_ROOT=$HOME/.nodebrew
-export PATH=$PATH:${HOME}/.nodebrew/current/bin
-
-# Dstat
-export DSTAT_MYSQL_USER=root
-export DSTAT_MYSQL_PWD=password
-export DSTAT_MYSQL_HOST='127.0.0.1'
-export DSTAT_MYSQL='-uroot -ppass -h127.0.0.1'
-
-# Nim
-export NIM_HOME=${HOME}"/repo/Nim"
-export NIMBLE_HOME=${HOME}"/.nimble"
-export PATH=$PATH:$NIM_HOME/bin:$NIMBLE_HOME/bin
 
 # Brewfile
 export HOMEBREW_BREWFILE=${HOME}/Dropbox/config/brew-file/Brewfile
