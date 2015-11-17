@@ -199,7 +199,8 @@
  elpa:flycheck
  elpa:flycheck-rust
  elpa:quickrun
- livedown)
+ livedown
+ tuareg-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
@@ -208,3 +209,4 @@
 (when (require 'init-loader nil t)
   ;; reading setting
   (init-loader-load "~/.emacs.d/conf"))
+

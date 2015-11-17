@@ -1,3 +1,4 @@
+# -*- mode: sh -*-
 # User configuration
 #============================================================================================
 
@@ -114,10 +115,14 @@ then
 fi
 
 
+# ocaml
+# opam init
+. ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+
 # Override setting
 #============================================================================================
 if [[ -f ${HOME}/.zsh_local ]]
 then
   source ${HOME}/.zsh_local
 fi
-
