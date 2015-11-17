@@ -198,7 +198,8 @@
  elpa:racer
  elpa:flycheck
  elpa:flycheck-rust
- elpa:quickrun)
+ elpa:quickrun
+ livedown)
 
 ;;;; ==========================================================================================================
 ;;;; other settings

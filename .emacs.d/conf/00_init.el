@@ -510,6 +510,7 @@ redrawが non-nilの場合は、Windowを再描画します。"
   )
 
 ;; Markdown
+;; npm install -g livedown
 (when (require 'livedown nil t)
   (custom-set-variables
    '(livedown:autostart nil) ; automatically open preview when opening markdown files 
