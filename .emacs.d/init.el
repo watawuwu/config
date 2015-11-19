@@ -200,7 +200,8 @@
  elpa:flycheck-rust
  elpa:quickrun
  livedown
- tuareg-mode)
+ tuareg-mode
+ swift-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
