@@ -301,8 +301,8 @@ redrawが non-nilの場合は、Windowを再描画します。"
 ;; C-eの連打でバッファ末尾へ
 ;; 大文字、小文字変換
 ;; M-uとM-lとM-cが現在位置の単語の変換からポイント直前の単語を変換するようになる
-(when (require 'sequential-command-config nil t)
-  (sequential-command-setup-keys))
+;; (when (require 'sequential-command-config nil t)
+;;   (sequential-command-setup-keys))
 
 ;; カーソル位置を戻す
 (when (require 'point-undo nil t)
