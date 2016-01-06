@@ -104,7 +104,6 @@
  confluence
  ctags
  cycle-buffer
- css-mode
  emacs-w3m
  ensime
  expand-region
@@ -122,7 +121,6 @@
  helm-migemo
  helm-ls-git
  helm-orgcard
- html-helper-mode
  ibus
  init-loader
  js2-mode
