@@ -2,10 +2,15 @@
 # User configuration
 #============================================================================================
 
+#CORRECT_IGNORE
+
 # You may need to manually set your language environment
 export LANG=ja_JP.UTF-8
 export LC_ALL=$LANG
 export LC_CTYPE=$LANG
+
+
+UTILS_PATH=${HOME}/util
 
 # Load aliasses
 if [ -f ~/.shell_aliases ]; then
@@ -37,13 +42,6 @@ export ANDROID_HOME=${HOME}/opt/adt-bundle/sdk
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${ANDROID_HOME}/tools
 
-
-# scala
-export SCALA_HOME="/opt/scala"
-
-# sbt
-export SBT_HOME="/opt/sbt"
-
 # nodebrew
 export NODEBREW_ROOT=$HOME/.nodebrew
 
@@ -56,7 +54,7 @@ export HOMEBREW_BREWFILE=${HOME}/Dropbox/config/brew-file/Brewfile
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # My bin directory
-export PATH=$PATH:$HOME/opt/bin
+export PATH=$PATH:$HOME/opt/bin:$HOME/.nodebrew/current/bin
 
 
 # functions
@@ -102,19 +100,6 @@ then
   source $(brew --prefix)/etc/brew-wrap
 fi
 
-# Java
-if [[ `uname` = "Darwin" ]]
-then
-  # for osx
-  export JAVA_HOME=`/usr/libexec/java_home`
-  export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-elif [[ `uname` = "Linux" ]]
-then
-  # for ubuntu
-  export JAVA_HOME=/usr/lib/jvm/java-7-oracle/
-fi
-
-
 # ocaml
 # opam init
 . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -126,3 +111,5 @@ if [[ -f ${HOME}/.zsh_local ]]
 then
   source ${HOME}/.zsh_local
 fi
+
+
