@@ -476,8 +476,13 @@ redrawが non-nilの場合は、Windowを再描画します。"
 
 ;; markdownモード
 (when (autoload-if-found 'markdown-mode "markdown-mode")
-  (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
-  (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode)))
+  (add-hook 'markdown-mode-hook
+            '(lambda ()
+               (set-face-background 'trailing-whitespace "DarkGreen")
+               (electric-indent-local-mode -1)))
+
+  (add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
+  (add-to-list 'auto-mode-alist '("\\.markdown$" . gfm-mode)))
 
 ;; nimモード
 (when (autoload-if-found 'nim-mode "nim-mode")
