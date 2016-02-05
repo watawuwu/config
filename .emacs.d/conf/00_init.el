@@ -175,6 +175,19 @@ redrawが non-nilの場合は、Windowを再描画します。"
 ;;;; キーバインド
 ;;;; ==========================================================================================================
 
+
+(defun insert-current-time()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%dT%H:%M:%S" (current-time))))
+
+(global-set-key (kbd "C-c t")    'insert-current-time)
+
+(defun insert-current-date()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d" (current-time))))
+
+(global-set-key (kbd "C-c .")    'insert-current-date)
+
 ;; バックスペース
 ;;(keyboard-translate ?\C-h ?\C-?)
 (global-set-key (kbd "C-h")     'delete-backward-char)
