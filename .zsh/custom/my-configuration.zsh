@@ -36,7 +36,6 @@ export ANDROID_HOME=${HOME}/opt/adt-bundle/sdk
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${ANDROID_HOME}/tools
 
-
 # scala
 export SCALA_HOME="/opt/scala"
 
@@ -57,6 +56,8 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # My bin directory
 export PATH=$PATH:$HOME/opt/bin
 
+# cargo
+export PATH=${PATH}:${HOME}/.multirust/toolchains/stable/cargo/bin
 
 # functions
 #--------------------------------------------------------------------------------------------
