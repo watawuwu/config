@@ -29,6 +29,9 @@ stty -ixon
 
 # Set Environment
 #--------------------------------------------------------------------------------------------
+# for brew
+export PATH="/usr/local/sbin:$PATH"
+
 # Python
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
 
