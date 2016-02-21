@@ -555,10 +555,11 @@ redrawが non-nilの場合は、Windowを再描画します。"
   (add-hook 'swift-mode-hook
             '(lambda()
                (add-to-list 'flycheck-checkers 'swift)
-               (setq flycheck-swift-sdk-path
-                     (replace-regexp-in-string
+               (custom-set-variables
+                '(flycheck-swift-sdk-path (replace-regexp-in-string
                       "\n+$" "" (shell-command-to-string
-                                 "xcrun --show-sdk-path --sdk macosx"))))))
+                                 "xcrun --show-sdk-path --sdk macosx")))
+                ))))
 
 (defun gker-setup-sh-mode ()
   "My own personal preferences for `sh-mode'.
