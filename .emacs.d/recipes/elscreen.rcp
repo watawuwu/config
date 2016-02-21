@@ -1,7 +1,7 @@
 (:name elscreen
      :description "Elscreen"
-	 :type github
-	 :pkgname "shosti/elscreen")
-					 
+     :type github
+     :pkgname "emacs-jp/elscreen")
+
 
 

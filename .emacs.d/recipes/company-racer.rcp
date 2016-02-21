@@ -1,0 +1,4 @@
+(:name company-racer
+       :description "Company integration for racer"
+       :type github
+       :pkgname "emacs-pe/company-racer")

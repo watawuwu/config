@@ -1,0 +1,3 @@
+(:name eldoc-extension
+       :description "eldoc-extension"
+       :type emacswiki)

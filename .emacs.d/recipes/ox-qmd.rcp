@@ -1,0 +1,5 @@
+(:name helm-ag
+       :description "Markdown (qiita flavor) export back-end for GNU Emacs Org-mode. This back-end is based on Markdown back-end (part of GNU Emacs24) and Github Flavored Markdown back-end."
+       :type github
+       :pkgname "0x60df/ox-qmd")
+

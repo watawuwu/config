@@ -175,6 +175,19 @@ redrawが non-nilの場合は、Windowを再描画します。"
 ;;;; キーバインド
 ;;;; ==========================================================================================================
 
+
+(defun insert-current-time()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%dT%H:%M:%S" (current-time))))
+
+(global-set-key (kbd "C-c t")    'insert-current-time)
+
+(defun insert-current-date()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d" (current-time))))
+
+(global-set-key (kbd "C-c .")    'insert-current-date)
+
 ;; バックスペース
 ;;(keyboard-translate ?\C-h ?\C-?)
 (global-set-key (kbd "C-h")     'delete-backward-char)
@@ -301,8 +314,8 @@ redrawが non-nilの場合は、Windowを再描画します。"
 ;; C-eの連打でバッファ末尾へ
 ;; 大文字、小文字変換
 ;; M-uとM-lとM-cが現在位置の単語の変換からポイント直前の単語を変換するようになる
-(when (require 'sequential-command-config nil t)
-  (sequential-command-setup-keys))
+;; (when (require 'sequential-command-config nil t)
+;;   (sequential-command-setup-keys))
 
 ;; カーソル位置を戻す
 (when (require 'point-undo nil t)
@@ -476,8 +489,13 @@ redrawが non-nilの場合は、Windowを再描画します。"
 
 ;; markdownモード
 (when (autoload-if-found 'markdown-mode "markdown-mode")
-  (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
-  (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode)))
+  (add-hook 'markdown-mode-hook
+            '(lambda ()
+               (set-face-background 'trailing-whitespace "DarkGreen")
+               (electric-indent-local-mode -1)))
+
+  (add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
+  (add-to-list 'auto-mode-alist '("\\.markdown$" . gfm-mode)))
 
 ;; nimモード
 (when (autoload-if-found 'nim-mode "nim-mode")
@@ -502,7 +520,6 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (when (autoload-if-found 'plantuml-mode "plantuml-mode")
   (add-to-list 'auto-mode-alist '("\\.puml$" . plantuml-mode)))
 
-
 ;; dash
 (when (require 'dash-at-point nil t)
   (global-set-key (kbd "C-c d") 'dash-at-point)
@@ -516,6 +533,32 @@ redrawが non-nilの場合は、Windowを再描画します。"
   (define-key esc-map (kbd "C-s") 'vr/isearch-forward)  ;; C-M-s
   )
 
+;; Markdown
+;; npm install -g livedown
+(when (require 'livedown nil t)
+  (custom-set-variables
+   '(livedown:autostart nil) ; automatically open preview when opening markdown files 
+   '(livedown:open t)        ; automatically open the browser window
+   '(livedown:port 1337))    ; port for livedown server
+  )
+
+
+;; ocamel-mode
+(add-to-list 'auto-mode-alist '("\\.ml[iylp]?" . tuareg-mode))
+(autoload 'tuareg-mode "tuareg" "Major mode for editing OCaml code" t)
+(autoload 'tuareg-run-ocaml "tuareg" "Run an inferior OCaml process." t)
+(autoload 'ocamldebug "ocamldebug" "Run the OCaml debugger" t)
+
+;; swift-mode
+(when (require 'swift-mode)
+  (add-to-list 'auto-mode-alist '("\\.swift$" . swift-mode))
+  (add-hook 'swift-mode-hook
+            '(lambda()
+               (add-to-list 'flycheck-checkers 'swift)
+               (setq flycheck-swift-sdk-path
+                     (replace-regexp-in-string
+                      "\n+$" "" (shell-command-to-string
+                                 "xcrun --show-sdk-path --sdk macosx"))))))
 
 (defun gker-setup-sh-mode ()
   "My own personal preferences for `sh-mode'.

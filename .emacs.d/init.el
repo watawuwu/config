@@ -24,6 +24,19 @@
         (and (stringp docstring)
              (get-text-property 0 'dynamic-docstring-function docstring)))))
 
+
+(defun exists-shell ()
+  (or (executable-find "zsh")
+      (executable-find "bash")
+      (executable-find "cmdproxy")
+      (error "can't find 'shell' command in PATH!!")))
+
+;; set shell environment
+(setq shell-file-name (exists-shell))
+(setenv "SHELL" shell-file-name)
+(setq explicit-shell-file-name shell-file-name)
+
+
 (defun set-exec-path-from-shell-PATH ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
    This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
@@ -52,6 +65,7 @@
 
 ;; add load-path directory
 (add-to-load-path "el-get")
+(add-to-load-path "private")
 
 
 
@@ -60,7 +74,6 @@
 ;;;; ==========================================================================================================
 (require 'package)
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
@@ -105,7 +118,6 @@
  confluence
  ctags
  cycle-buffer
- css-mode
  emacs-w3m
  ensime
  expand-region
@@ -123,7 +135,6 @@
  helm-migemo
  helm-ls-git
  helm-orgcard
- html-helper-mode
  ibus
  init-loader
  js2-mode
@@ -193,12 +204,16 @@
  erfi
  replace-colorthemes
  emacswiki-powerline
+ ecasound-ewf
  elpa:company
- elpa:company-racer
+ company-racer
  elpa:racer
  elpa:flycheck
  elpa:flycheck-rust
- elpa:quickrun)
+ elpa:quickrun
+ livedown
+ tuareg-mode
+ swift-mode)
 
 ;;;; ==========================================================================================================
 ;;;; other settings
@@ -207,3 +222,4 @@
 (when (require 'init-loader nil t)
   ;; reading setting
   (init-loader-load "~/.emacs.d/conf"))
+

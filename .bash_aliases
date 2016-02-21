@@ -76,7 +76,7 @@ if [ `uname` = "Darwin" ]; then
     alias chroot=gchroot
     alias cksum=gcksum
     alias comm=gcomm
-    alias cp=gcp
+    alias cp=/usr/local/bin/gcp
     alias csplit=gcsplit
     alias cut=gcut
     alias date=gdate
@@ -167,6 +167,7 @@ if [ `uname` = "Darwin" ]; then
     alias who=gwho
     alias whoami=gwhoami
     alias yes=gyes
+
 
     # git
     alias git=/usr/local/bin/git
