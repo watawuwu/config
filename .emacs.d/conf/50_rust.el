@@ -4,9 +4,9 @@
   (eval-after-load "rust-mode" '(require 'racer))
 
   (custom-set-variables
-   '(racer-cmd (expand-file-name "~/opt/bin/racer"))
+   '(racer-cmd (expand-file-name "~/.multirust/toolchains/stable/cargo/bin/racer"))
    ;; https://github.com/brson/multirust/issues/77
-   '(racer-rust-src-path (expand-file-name "~/.multirust/toolchains/1.4.0/src")))
+   '(racer-rust-src-path (expand-file-name "~/.multirust/toolchains/1.6.0/src")))
 
   ;; Load rust-mode when you open `.rs` files
   (add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
