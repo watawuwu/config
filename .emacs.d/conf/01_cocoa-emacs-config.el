@@ -4,6 +4,8 @@
 
 (setq x-select-enable-clipboard t)
 
+(global-set-key (kbd "s-v") 'yank)
+
 (setq default-input-method "MacOSX")
 
 ;; ¥ to \
