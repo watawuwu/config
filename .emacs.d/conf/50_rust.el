@@ -19,7 +19,6 @@
                (eldoc-mode)
                (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
                (define-key rust-mode-map (kbd "C-c C-f") #'rustfmt-format-buffer)
-               (rustfmt-enable-on-save)
                (flycheck-mode)
                ))
 
