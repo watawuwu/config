@@ -48,7 +48,7 @@
 
   ;; メモを格納するorgファイルの設定
   (setq org-directory "~/dropbox/memo")
-  (setq org-default-notes-file (expand-file-name "misc.org" org-directory))
+  (setq org-default-notes-file (expand-file-name "node.org" org-directory))
 
   ;; 予定表に使うorgファイルのリスト
   (setq org-agenda-files (list org-directory))
@@ -59,8 +59,11 @@
   (setq org-capture-templates
         '(("t" "Todo" entry (file+headline "todo.org" "Tasks")
            "* TODO %?\n %i\n %a")
-          ("c" "Misc" entry (file+datetree "misc.org")
-           "* %?\nEntered on %U\n %i\n %a")))
+          ("n" "Note" entry (file+headline "notes.org" "Notes")
+           "* %?\n %U\n %i")
+          ("r" "Try" entry (file+datetree "try.org" "Tries")
+            "* %?\n %U\n")
+          ))
 
   ;; テンプレートの選択
   (setq org-use-fast-todo-selection t)
