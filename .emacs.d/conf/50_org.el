@@ -11,6 +11,11 @@
   ;; markdown
   (when (require 'ox-md nil t))
 
+  ;; qiita markdown
+  (when (require 'ox-qmd nil t)
+    (add-to-list 'ox-qmd-language-keyword-alist '("shell-script" . "sh")))
+
+
   (defun org-insert-example-block ()
     (interactive)
     (org-indent-line)
