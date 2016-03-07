@@ -11,32 +11,25 @@
     ui = auto
 
 [merge]
+	tool = p4mergetool
     keepBackup = false
 
-[mergetool "p4merge"]
-    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+[mergetool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
     keepTemporaries = false
-    trustExitCode = false
+	trustExitCode = false
     keepBackup = false
 
 [diff]
-    external = p4diff
-    tool = p4diff
+    tool = p4mergetool
 
-[difftool "p4diff"]
-    cmd = p4diff "$LOCAL" "$REMOTE"
+[difftool "p4mergetool"]
+    cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
     prompt = false
 
-#[diff]
-#    external = p4diff
-#    tool = p4merge
-#
-#[difftool "p4merge"]
-#    cmd = p4merge "$LOCAL" "$REMOTE"
-#    prompt = false
 
 [push]
-    default = tracking
+    default = upstream
 
 [alias]
     # common
