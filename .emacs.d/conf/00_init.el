@@ -572,6 +572,12 @@ prefer for `sh-mode'.  It is automatically added to
         sh-indentation 2))
 (add-hook 'sh-mode-hook 'gker-setup-sh-mode)
 
+;; http://rubikitch.com/2014/12/25/helm-swoop/
+(when (require 'avy)
+    (require 'ace-isearch)
+  (global-ace-isearch-mode 1))
+
+
 ;; サーバ起動
 (when (server-start)
   (defun iconify-emacs-when-server-is-done ()
