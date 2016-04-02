@@ -144,8 +144,6 @@
  magit
  moccur-edit
  open-junk-file
- org-html5presentation
- org-jira
  org-mode
  package
  paredit
