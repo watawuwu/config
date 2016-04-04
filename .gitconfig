@@ -11,13 +11,13 @@
     ui = auto
 
 [merge]
-	tool = p4mergetool
+    tool = p4mergetool
     keepBackup = false
 
 [mergetool "p4mergetool"]
-	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+    cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
     keepTemporaries = false
-	trustExitCode = false
+    trustExitCode = false
     keepBackup = false
 
 [diff]
@@ -42,11 +42,11 @@
     rbm = rebase master
     ad = add
     ci = commit
-	cm = commit --amend
+    cm = commit --amend
     cal = commit -a
     cam = commit -a --amend
     co = checkout
-	coh = checkout HEAD
+    coh = checkout HEAD
 
     # branch
     br = branch
