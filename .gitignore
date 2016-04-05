@@ -5,3 +5,4 @@
 *.elc
 .svn/
 .emacs.d/conf/60_confluence.el
+.emacs.d/recentf*
