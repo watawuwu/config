@@ -549,18 +549,6 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (autoload 'tuareg-run-ocaml "tuareg" "Run an inferior OCaml process." t)
 (autoload 'ocamldebug "ocamldebug" "Run the OCaml debugger" t)
 
-;; swift-mode
-(when (require 'swift-mode)
-  (add-to-list 'auto-mode-alist '("\\.swift$" . swift-mode))
-  (add-hook 'swift-mode-hook
-            '(lambda()
-               (add-to-list 'flycheck-checkers 'swift)
-               (setq flycheck-swift-sdk-path
-                     (replace-regexp-in-string
-                      "\n+$" "" (shell-command-to-string
-                                 "xcrun --show-sdk-path --sdk macosx")))
-               )))
-
 (defun gker-setup-sh-mode ()
   "My own personal preferences for `sh-mode'.
 
@@ -572,13 +560,7 @@ prefer for `sh-mode'.  It is automatically added to
         sh-indentation 2))
 (add-hook 'sh-mode-hook 'gker-setup-sh-mode)
 
-;; http://rubikitch.com/2014/12/25/helm-swoop/
-(when (require 'avy)
-    (require 'ace-isearch)
-  (global-ace-isearch-mode 1))
-
-
-;; サーバ起動
+;; server start
 (when (server-start)
   (defun iconify-emacs-when-server-is-done ()
     (unless 'server-clients (iconify-frame))))
