@@ -74,7 +74,3 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/opt/bin
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 source ${HOME}/.zsh/custom/conf.zsh
-
-# pip install --user powerline-status
-export PATH=$PATH:$HOME/Library/Python/2.7/bin
-source ${HOME}/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh

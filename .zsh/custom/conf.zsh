@@ -116,6 +116,26 @@ fi
 . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 
+
+# pip install --user powerline-status
+if [[ -f ${HOME}/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh ]]
+then
+  export PATH=$PATH:$HOME/Library/Python/2.7/bin
+  source ${HOME}/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [[ -f ${HOME}/opt/google-cloud-sdk/path.zsh.inc ]]
+then
+  source ${HOME}/opt/google-cloud-sdk/path.zsh.inc
+fi
+
+# The next line enables shell command completion for gcloud.
+if [[ -f ${HOME}/opt/google-cloud-sdk/completion.zsh.inc ]]
+then
+  source ${HOME}/opt/google-cloud-sdk/completion.zsh.inc
+fi
+
 # Override setting
 #============================================================================================
 if [[ -f ${HOME}/.zsh_local ]]
