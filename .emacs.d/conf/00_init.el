@@ -549,6 +549,13 @@ redrawが non-nilの場合は、Windowを再描画します。"
 (autoload 'tuareg-run-ocaml "tuareg" "Run an inferior OCaml process." t)
 (autoload 'ocamldebug "ocamldebug" "Run the OCaml debugger" t)
 
+;; makefile-mode-hook
+(add-hook 'makefile-mode-hook
+          (function
+           (lambda ()
+             (fset 'makefile-warn-suspicious-lines 'ignore))))
+
+
 (defun gker-setup-sh-mode ()
   "My own personal preferences for `sh-mode'.
 
