@@ -567,9 +567,7 @@ prefer for `sh-mode'.  It is automatically added to
         sh-indentation 2))
 (add-hook 'sh-mode-hook 'gker-setup-sh-mode)
 
-(when (require 'terraform-mode nil t)
-  (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode))
-
+(when (require 'terraform-mode nil t))
 
 ;; server start
 (when (server-start)
