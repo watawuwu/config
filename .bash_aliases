@@ -4,7 +4,7 @@ if [ -x /usr/local/bin/gdircolors ]; then
     test -r ~/.dircolors && eval "$(/usr/local/bin/gdircolors -b ~/.dircolors)" || eval "$(/usr/local/bin/gdircolors -b)"
     #alias ls='gls -G'
     alias ls='gls --color'
-    #alias dir='dir --color=auto'
+   #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
@@ -35,9 +35,18 @@ alias to_unixtime="date +%s --date"
 
 alias sqllint="php ${HOME}/repo/sql-formatter/examples/cli.php"
 
-alias dc-all-rm="docker ps -qf 'status=exited' | xargs -n 1 docker rm"
-alias dc-last-id="docker ps -qal"
+alias drmi="docker images --filter 'dangling=true' -q | xargs -n 1 docker rmi -f"
 
+
+
+alias dcom="docker-compose"
+alias dcom-tail="docker-compose logs -f"
+alias dcom-up="docker-compose up"
+alias dcom-upd="docker-compose up -d"
+alias dcom-stop="docker-compose stop"
+alias dcom-exec="docker-compose exec"
+
+alias kc="kubectl"
 
 if [ `uname` = "Darwin" ]; then
     # for osx

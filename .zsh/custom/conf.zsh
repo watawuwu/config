@@ -68,6 +68,9 @@ export PATH=$PATH:$HOME/opt/bin:$HOME/.nodebrew/current/bin
 # cargo
 export PATH=${PATH}:${HOME}/.multirust/toolchains/stable/cargo/bin
 
+# go
+export GOPATH=$HOME/.go
+
 # functions
 #--------------------------------------------------------------------------------------------
 

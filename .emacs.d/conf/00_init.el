@@ -555,6 +555,11 @@ redrawが non-nilの場合は、Windowを再描画します。"
            (lambda ()
              (fset 'makefile-warn-suspicious-lines 'ignore))))
 
+;; lua-mode
+(when (require 'lua-mode nil t)
+  (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+  (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+  (add-to-list 'interpreter-mode-alist '("lua" . lua-mode)))
 
 (defun gker-setup-sh-mode ()
   "My own personal preferences for `sh-mode'.

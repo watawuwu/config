@@ -98,3 +98,6 @@
 #     fsckObjects = true #default : false
 #     denyNonFastForwards = true
 #     denyDeletes = true
+[user]
+	name = watawuwu
+	email = watawuwu@gmail.com
