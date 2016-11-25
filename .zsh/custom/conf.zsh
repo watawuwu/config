@@ -65,8 +65,10 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # My bin directory
 export PATH=$PATH:$HOME/opt/bin:$HOME/.nodebrew/current/bin
 
-# cargo
+# Rust
 export PATH=${PATH}:${HOME}/.multirust/toolchains/stable/cargo/bin
+source $HOME/.cargo/env
+
 
 # go
 export GOPATH=$HOME/.go

@@ -17,6 +17,8 @@ bindkey '^N' history-substring-search-down
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 
+fpath+=${HOME}/.zfunc
+
 # Eompinit
 autoload -Uz compinit
 compinit
