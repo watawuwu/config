@@ -52,7 +52,7 @@ export SCALA_HOME="/opt/scala"
 export SBT_HOME="/opt/sbt"
 
 # nodebrew
-export NODEBREW_ROOT=$HOME/.nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # Nim
 export NIM_HOME=${HOME}"/repo/Nim"
@@ -69,9 +69,9 @@ export PATH=$PATH:$HOME/opt/bin:$HOME/.nodebrew/current/bin
 export PATH=${PATH}:${HOME}/.multirust/toolchains/stable/cargo/bin
 source $HOME/.cargo/env
 
-
 # go
 export GOPATH=$HOME/.go
+export PATH=${PATH}:${GOPATH}/bin
 
 # functions
 #--------------------------------------------------------------------------------------------
@@ -120,7 +120,8 @@ fi
 # opam init
 . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-
+# rust cargo
+. ${HOME}/.cargo/env
 
 # pip install --user powerline-status
 if [[ -f ${HOME}/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh ]]

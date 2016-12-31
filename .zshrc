@@ -14,6 +14,15 @@ bindkey '^N' history-substring-search-down
 # zplug "b4b4r07/enhancd", of:enhancd.sh
 
 # Enable cdr
+for d in "/share/zsh-completions" "/share/zsh/zsh-site-functions";do
+  brew_completion=$(brew --prefix 2>/dev/null)$d
+  if [ $? -eq 0 ] && [ -d "$brew_completion" ];then
+    fpath=($brew_completion $fpath)
+  fi
+done
+
+fpath+=${HOME}/.zfunc
+
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 
