@@ -1,13 +1,14 @@
 ;; rustモード
 (when (require 'rust-mode nil t)
+  (add-to-list 'exec-path (expand-file-name "~/.cargo/bin/"))
+
+  (eval-after-load "rust-mode"
+  '(setq-default rust-format-on-save t))
+
   (eval-after-load "rust-mode" '(require 'company))
   (eval-after-load "rust-mode" '(require 'racer))
 
-  (custom-set-variables
-   '(racer-cmd (expand-file-name "~/.multirust/toolchains/stable/cargo/bin/racer"))
-   ;; https://github.com/brson/multirust/issues/77
-   '(racer-rust-src-path (expand-file-name "~/.multirust/toolchains/1.6.0/src")))
-   '(rust-indent-offset 4)
+  '(rust-indent-offset 4)
 
   ;; Load rust-mode when you open `.rs` files
   (add-to-list 'auto-mode-alist '("\\.rs$" . rust-mode))
@@ -16,12 +17,11 @@
   (add-hook 'rust-mode-hook
             '(lambda ()
                (racer-mode)
-               (eldoc-mode)
-               (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+               (flycheck-rust-setup)
                (define-key rust-mode-map (kbd "C-c C-f") #'rustfmt-format-buffer)
-               (flycheck-mode)
                ))
 
+  (add-hook 'racer-mode-hook #'eldoc-mode)
 
   (add-hook 'racer-mode-hook
             '(lambda ()

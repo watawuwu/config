@@ -2,16 +2,10 @@
 ;;;; initialization
 ;;;; ==========================================================================================================
 
-
-
-;; Warning restraint at the time of the compilation.
 (setq byte-compile-warnings
       '(free-vars unresolved callargs redefine obsolete noruntime
                   cl-functions interactive-only make-local))
 
-;; Before 23 version change the directory setting.
-(when (> emacs-major-version 23)
-  (defvar user-emacs-directory "~/.emacs.d"))
 
 ;; After 24 version removed in emacs 24.4, add it for now
 ;; bytecompileするとエラーになる
@@ -67,21 +61,18 @@
 (add-to-load-path "el-get")
 (add-to-load-path "private")
 
-
-
 ;;;; ==========================================================================================================
 ;;;; package
 ;;;; ==========================================================================================================
 (require 'package)
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("melpa2" . "https://melpa.org/packages") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
-(package-refresh-contents)
 (package-initialize)
+(package-refresh-contents)
 
 
 ;;;; ==========================================================================================================
@@ -108,6 +99,7 @@
            do (eval `(el-get-bundle ,p))))
 
 (el-get-sync
+ pkg-info
  apache-mode
  apples-mode
  auto-async-byte-compile
@@ -116,7 +108,6 @@
  auto-save-buffers-enhanced
  c-eldoc
  color-moccur
- confluence
  ctags
  cycle-buffer
  emacs-w3m
@@ -136,7 +127,6 @@
  helm-migemo
  helm-ls-git
  helm-orgcard
- ibus
  init-loader
  js2-mode
  judge-indent
