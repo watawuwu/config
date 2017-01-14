@@ -69,9 +69,12 @@ export PATH=$PATH:$HOME/opt/bin:$HOME/.nodebrew/current/bin
 export PATH=${PATH}:${HOME}/.multirust/toolchains/stable/cargo/bin
 source $HOME/.cargo/env
 
-# go
+# Go
 export GOPATH=$HOME/.go
 export PATH=${PATH}:${GOPATH}/bin
+
+# Jave
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # functions
 #--------------------------------------------------------------------------------------------
